@@ -1,0 +1,21 @@
+.myNavbar {
+    background: #232426;
+    box-shadow: 0 5px 10px 0px rgba(20, 20, 28, 0.3);
+    position: sticky;
+    top: 0;
+    padding: 15px 0;
+    z-index: 10;
+}
+
+.myNavbar__list {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    justify-content: end;
+}
+
+.myNavbar__item {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 21px;
+    font-weight: 700;
+}

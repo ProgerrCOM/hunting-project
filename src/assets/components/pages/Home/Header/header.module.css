@@ -1,0 +1,64 @@
+.header{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: #2f3828f5  ;
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.number__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+.contacts__number {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+
+.number__img {
+    width: 20px;
+    filter: invert(100%);
+}
+
+.content__number {
+    color: rgba(239,239,239,0.67);
+    font-size: 15px;
+}
+
+.header__button {
+    font-size: 15px;
+    font-weight: bold;
+    background: transparent;
+    border: 1px solid #c5c5c5;
+    color: rgba(239,239,239,0.67);
+    padding: 12px 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 1px  rgba(239,239,239,0.67);
+    transition: 0.5s;
+}
+
+.header__button:hover {
+    background: rgba(239,239,239,0.67);
+    color: black;
+}
+.header__logo_icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
