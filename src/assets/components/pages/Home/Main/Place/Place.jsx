@@ -2,14 +2,15 @@ import "./place.css"
 import  {place} from "./place.js";
 
 
+
 const Place = () => {
     return (
         <div className="place">
             <div className="place__container _container">
                 <div className='place__title'>
-                    <div className="place__header">RESIDENTIAL PROPERTY CATEGORIES</div>
-                    <div className="place__content">At our agency, we work with various types of residential real estate
-                        property. You can find <br/> out more about our properties by browsing our website.
+                    <div className="place__header">ПОЛЮВАННЯ НА ПЕРНАТУ ДИЧИНУ</div>
+                    <div className="place__content">Спробуйте себе в полюванні на водно-болотну дичину
+                         <br/> (качка, лиска), польову (вальдшнеп, деркач, бекас, голуб) відстрільна карта на день полювання
                     </div>
                 </div>
 
@@ -27,7 +28,7 @@ const Place = () => {
                     <button className='palce__button'> Hello world</button>
                 </div>
             </div>
-
+            <span className='line'></span>
         </div>
     );
 };

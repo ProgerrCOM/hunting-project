@@ -16,8 +16,8 @@ p {
     display: flex;
     flex-direction: column;
     gap: 10px;
-
 }
+
 
 
 .properties__title {
@@ -31,12 +31,11 @@ p {
 }
 
 .properties__item {
-    padding-bottom: 30px;
+    padding-bottom: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
 
 .properties__image img {
@@ -54,6 +53,7 @@ p {
      color:rgba(239,239,239,0.67)
 }
 
+
 .post-modern-meta {
     color: #495057;
     font-weight: 500;
@@ -61,6 +61,7 @@ p {
     align-items: center;
     justify-content: center;
     gap: 30px;
+
 }
 
 .post-modern-meta li {
@@ -68,10 +69,11 @@ p {
     display: inline-block;
     line-height: 24px;
     font-size: 18px;
+
 }
 
 .post-modern-meta + p {
-    color: #151515;
+    color: rgba(239,239,239,0.67);
 }
 
 .button-winona {
@@ -85,6 +87,30 @@ p {
 
 .properties__history {
     text-align: center;
+    color: rgba(239,239,239,0.67);
 }
+.properties__info {
+    color: rgba(239,239,239,0.67);
+}
+.content-original{
+    color: #527339;
+}
+
+.properties__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.properties__btn {
+    padding: 15px 100px;
+    background: rgba(98,115,27,0.45);
+    font-size: 20px;
+    color: white;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
 
 

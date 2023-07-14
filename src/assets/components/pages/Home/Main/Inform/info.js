@@ -6,19 +6,19 @@ export const info = [
     {
         id:1,
         img: humen__icon,
-        main:"Qualified Employees",
-        info:"Our team consists of more than 20 qualified and experienced real estate brokers and property managers ready to help you."
+        main:"Досвідчений склад мисливців",
+        info:"Наш персональний склад містить в собі інструктурів зі стажем понад 10 років."
     },
     {
         id:2,
         img: massage__icon,
-        main:"Free Consultations",
-        info:"Our acquaintance with a client always begins with a free consultation to find out what kind of property they are looking for."
+        main:"Безкоштовні консультації",
+        info:"Ви можете безкоштовно проконсультуватися з інстуркторами, дізнатися всі деталі та подробиці полювання."
     },
     {
         id:3,
         img: star__icon,
-        main:"100% Guaranteed",
-        info:"All the results that you get from our realtors are 100% guaranteed to offer you the best choice of properties throughout the USA."
+        main:"Даємо гарантію 100%",
+        info:"Ми даємо гарантію, що ви не підете без видобутку і проведете повноцінне полювання з всіма потрібними засобами."
     },
 ]

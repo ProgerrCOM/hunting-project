@@ -10,7 +10,7 @@ const Properties = () => {
                 <h3 className='properties__title'>
                     НАЙБІЛЬШ ПОПУЛЯРНІ ВИДИ ПОЛЮВАННЯ
                 </h3>
-                <div className='row'>
+                <div className='row properties__cards'>
                     {properties.map(propertie =>
                         <div key={propertie.id} className="properties__item col-xl-6 col-lg-12">
                             <div className="properties__image">
@@ -23,8 +23,8 @@ const Properties = () => {
                                         <li><a className="button-winona" href="#">
                                             <div className="content-original">{propertie.price}</div>
                                         </a></li>
-                                        <li>{propertie.info1}</li>
-                                        <li>{propertie.info2}</li>
+                                        <li className="properties__info">{propertie.info1}</li>
+                                        <li className="properties__info">{propertie.info2}</li>
                                     </ul>
                                     <p className="properties__history">{propertie.description}
                                     </p>
@@ -32,6 +32,11 @@ const Properties = () => {
                             </div>
                         </div>
                     )}
+                </div>
+                <div className='properties__button'>
+                    <button className="properties__btn">
+                        view More properties
+                    </button>
                 </div>
             </div>
         </div>
