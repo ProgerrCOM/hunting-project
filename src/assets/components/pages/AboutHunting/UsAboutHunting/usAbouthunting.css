@@ -1,0 +1,48 @@
+.aboutHunting {
+    position: relative;
+    background: url("src/assets/img/add--Hunting.jpg");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 460px
+}
+
+.aboutHunting--container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: 150px;
+}
+
+
+.aboutHunting__container {
+}
+
+.aboutHunting__content {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 30px;
+    background: rgba(0,0,0,0.5);
+    padding: 30px 100px;
+    border-radius: 30px;
+    box-shadow: 0 0 50px 0 rgba(255,255,255,0.5);
+    margin: 50px;
+}
+
+.aboutHunting__name {
+    color: #aeb1be;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.aboutHunting__info {
+    font-size: 50px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 3px;
+}
