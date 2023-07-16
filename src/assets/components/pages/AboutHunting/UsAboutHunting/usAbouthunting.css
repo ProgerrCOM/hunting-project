@@ -1,4 +1,4 @@
-.aboutHunting {
+.usAboutHunting {
     position: relative;
     background: url("src/assets/img/add--Hunting.jpg");
     background-repeat: no-repeat;
@@ -6,7 +6,7 @@
     height: 460px
 }
 
-.aboutHunting--container {
+.usAboutHunting--container {
     position: absolute;
     top: 0;
     left: 0;
@@ -17,10 +17,10 @@
 }
 
 
-.aboutHunting__container {
+.usAboutHunting__container {
 }
 
-.aboutHunting__content {
+.usAboutHunting__content {
     display: inline-flex;
     flex-direction: column;
     gap: 30px;
@@ -31,7 +31,7 @@
     margin: 50px;
 }
 
-.aboutHunting__name {
+.usAboutHunting__name {
     color: #aeb1be;
     text-transform: uppercase;
     letter-spacing: 3px;
@@ -39,7 +39,7 @@
     font-weight: bold;
 }
 
-.aboutHunting__info {
+.usAboutHunting__info {
     font-size: 50px;
     text-transform: uppercase;
     font-weight: bold;

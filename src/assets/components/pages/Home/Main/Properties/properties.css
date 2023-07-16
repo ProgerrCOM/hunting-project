@@ -36,6 +36,14 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.properties__item.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .properties__image img {
@@ -111,6 +119,7 @@ p {
     border-radius: 20px;
     text-transform: uppercase;
 }
+
 
 
 

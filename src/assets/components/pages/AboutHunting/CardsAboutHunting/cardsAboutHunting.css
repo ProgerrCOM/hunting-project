@@ -1,0 +1,85 @@
+.cardsAboutHunting__item.reverse {
+    flex-direction: row-reverse;
+}
+
+.cardsAboutHunting {
+    padding-top: 100px;
+}
+
+.cardsAboutHunting__container {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.cardsAboutHunting__item {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cardsAboutHunting__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 20px;
+    padding: 30px;
+}
+
+.cardsAboutHunting__title {
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+}
+
+.cardsAboutHunting__text {
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 2px;
+    color: white;
+}
+
+.cardsAboutHunting__image {
+    display: flex;
+    justify-content: center;
+}
+
+.cardsAboutHunting__img {
+}
+
+.cardsAboutHunting__conclusion {
+   max-width: 1000px;
+    margin: 0 auto;
+}
+
+.conclusion__title {
+
+}
+
+.conclusion__text{
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    line-height: 126%;
+    background: rgba(255,255,255,0.1);
+    border-radius: 20px;
+    padding: 30px;
+}
+
+.cardsAboutHunting__item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.cardsAboutHunting__item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+

@@ -68,3 +68,13 @@
     border-radius: 20px;
 }
 
+.place__conteiner__picture {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.place__conteiner__picture.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

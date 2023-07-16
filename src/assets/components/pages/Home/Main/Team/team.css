@@ -20,10 +20,18 @@
 
 
 .team_content {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
     display: flex;
     gap: 30px;
     padding-bottom: 75px;
     width: 45%;
+}
+
+.team_content.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .team__text {

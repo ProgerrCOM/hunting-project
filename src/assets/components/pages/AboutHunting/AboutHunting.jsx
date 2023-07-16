@@ -1,13 +1,18 @@
-import Header from "../Home/Header/Header.jsx";
-import MainAboutHunting from "./MainAboutHunting/MainAboutHunting.jsx";
+import UsAboutHunting from "./UsAboutHunting/UsAboutHunting.jsx";
+import CardsAboutHunting from "./CardsAboutHunting/CardsAboutHunting.jsx";
+import './aboutHunting.css'
+import MapAboutHunting from "./MapAboutHunting/MapAboutHunting.jsx";
 
 const AboutHunting = () => {
     return (
-        <div>
-            <Header/>
-            <MainAboutHunting/>
+        <div className="aboutHunting">
+            <UsAboutHunting/>
+            <CardsAboutHunting/>
+            <MapAboutHunting/>
         </div>
     );
+
 };
+
 
 export default AboutHunting;
