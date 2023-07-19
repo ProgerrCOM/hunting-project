@@ -1,13 +1,13 @@
-.usAboutHunting {
+.itemDetailsMain {
     position: relative;
-    background: url("/src/assets/img/UsAbout.jpg");
+    background: url("/src/assets/img/itemDetailsMain.jpg");
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
     height: 460px
 }
 
-.usAboutHunting--container {
+.itemDetailsMain--container {
     position: absolute;
     top: 0;
     left: 0;
@@ -18,10 +18,7 @@
 }
 
 
-.usAboutHunting__container {
-}
-
-.usAboutHunting__content {
+.itemDetailsMain__content {
     display: inline-flex;
     flex-direction: column;
     gap: 30px;
@@ -32,7 +29,7 @@
     margin: 50px;
 }
 
-.usAboutHunting__name {
+.itemDetailsMain__name {
     color: #aeb1be;
     text-transform: uppercase;
     letter-spacing: 3px;
@@ -40,7 +37,7 @@
     font-weight: bold;
 }
 
-.usAboutHunting__info {
+.itemDetailsMain__info {
     font-size: 50px;
     text-transform: uppercase;
     font-weight: bold;

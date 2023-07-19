@@ -1,0 +1,22 @@
+.animalsProperties {
+    padding-top: 0;
+}
+
+.titleList {
+    color: rgba(239, 239, 239, 0.67);
+    text-transform: uppercase;
+    font-size: 40px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+.titleList p {
+    display: inline-block;
+    background: rgba(105,105,105,0.2);
+    box-shadow: 0 0 30px 0 rgba(255,255,255,0.3);
+    border-radius: 30px;
+    padding: 30px 100px;
+}

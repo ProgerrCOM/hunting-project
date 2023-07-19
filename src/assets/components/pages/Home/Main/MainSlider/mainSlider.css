@@ -15,7 +15,7 @@
 }
 
 .slider {
-    background-image: url("src/assets/img/Hunting-1.jpg");
+    background-image: url("/src/assets/img/Hunting-1.jpg");
     padding-top: 200px;
     padding-bottom: 200px;
     background-repeat: no-repeat;
@@ -26,7 +26,7 @@
 }
 
 .slider1 {
-    background-image: url("src/assets/img/Hunting-2.jpg");
+    background-image: url("/src/assets/img/Hunting-2.jpg");
     padding-top: 200px;
     padding-bottom: 200px;
     background-repeat: no-repeat;
@@ -36,7 +36,7 @@
     height: 800px;
 }
 .slider2 {
-    background-image: url("src/assets/img/Hunting-3.jpg");
+    background-image: url("/src/assets/img/Hunting-3.jpg");
     padding-top: 200px;
     padding-bottom: 200px;
     background-repeat: no-repeat;

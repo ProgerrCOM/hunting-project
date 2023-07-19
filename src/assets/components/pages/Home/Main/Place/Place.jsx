@@ -64,7 +64,6 @@ const Place = () => {
                     </NavLink>
                 </div>
             </div>
-            <span className='line'></span>
         </div>
     );
 };

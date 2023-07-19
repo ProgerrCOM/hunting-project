@@ -1,6 +1,6 @@
 .aboutAnimalMain {
     position: relative;
-    background: url("src/assets/img/add--Hunting.jpg");
+    background: url("/src/assets/img/add--Hunting.jpg");
     background-repeat: no-repeat;
     width: 100%;
     height: 460px

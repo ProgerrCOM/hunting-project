@@ -4,7 +4,7 @@ import AboutHunting from './assets/components/pages/AboutHunting/AboutHunting';
 import Header from './assets/components/pages/Home/Header/Header';
 import Navbar from './assets/components/pages/Home/Header/Navbar/Navbar';
 import AboutAnimals from "./assets/components/pages/AboutAnimals/AboutAnimals.jsx";
-import ItemDetails from "./assets/components/pages/ItemDetails/ItemDetails.jsx";
+import ItemDetails from "./assets/components/pages/ItemDetails/ItemDetailsInfo/ItemDetails.jsx";
 
 function App() {
     return (
