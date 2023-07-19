@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import './properties.css';
-import { properties } from "./properties.js";
+import {properties} from "./properties.js";
+import {NavLink} from "react-router-dom";
 
 const Properties = () => {
     const [visibleItems, setVisibleItems] = useState([]);
@@ -47,7 +48,7 @@ const Properties = () => {
                             }`}
                         >
                             <div className="properties__image">
-                                <img src={propertie.img} alt="" />
+                                <img src={propertie.img} alt=""/>
                             </div>
                             <div>
                                 <div className="properties__content">
@@ -68,9 +69,11 @@ const Properties = () => {
                     ))}
                 </div>
                 <div className='properties__button'>
-                    <button className="properties__btn">
-                        view More properties
-                    </button>
+                    <NavLink to='/aboutAnimals'>
+                        <button className="properties__btn">
+                            view More properties
+                        </button>
+                    </NavLink>
                 </div>
             </div>
         </div>

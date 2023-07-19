@@ -1,7 +1,8 @@
 .usAboutHunting {
     position: relative;
-    background: url("src/assets/img/add--Hunting.jpg");
+    background: url("src/assets/img/UsAbout.jpg");
     background-repeat: no-repeat;
+    background-position: center;
     width: 100%;
     height: 460px
 }

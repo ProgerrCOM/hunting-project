@@ -9,9 +9,9 @@ const Main = () => {
     return (
         <div>
             <MainSlider/>
-            <Properties/>
-            <Indorm/>
             <Place/>
+            <Indorm/>
+            <Properties/>
             <Team/>
              <BestOffers/>
         </div>

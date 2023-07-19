@@ -26,6 +26,12 @@
     background: rgba(255,255,255,0.05);
     border-radius: 20px;
     padding: 30px;
+    box-shadow: 0 8px 0 rgba(255,255,255,0.13);
+    transition: 1s;
+}
+
+.cardsAboutHunting__card:hover {
+    box-shadow: none;
 }
 
 .cardsAboutHunting__title {
@@ -48,6 +54,15 @@
 }
 
 .cardsAboutHunting__img {
+    width: 450px;
+    height: 250px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px 0 rgba(255,255,255,0.13);
+    transition: 1s;
+}
+
+.cardsAboutHunting__img:hover{
+    box-shadow: 0 0 30px 0 rgba(255,255,255,0.20);
 }
 
 .cardsAboutHunting__conclusion {
@@ -67,6 +82,7 @@
     background: rgba(255,255,255,0.1);
     border-radius: 20px;
     padding: 30px;
+    margin-bottom: 40px;
 }
 
 .cardsAboutHunting__item {

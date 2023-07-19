@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import './cardsAboutHunting.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import { cardsAboutHuntings } from "./cardsAboutHunting.js";

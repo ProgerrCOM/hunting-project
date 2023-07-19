@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import './place.css';
 import {place} from "./place.js";
+import {NavLink} from "react-router-dom";
 
 const Place = () => {
     const [visiblePictures, setVisiblePictures] = useState([]);
@@ -58,7 +59,9 @@ const Place = () => {
                     ))}
                 </div>
                 <div className='place__btn'>
-                    <button className='palce__button'> Hello world</button>
+                    <NavLink to='/aboutAnimals'>
+                        <button className='palce__button'> Hello world</button>
+                    </NavLink>
                 </div>
             </div>
             <span className='line'></span>

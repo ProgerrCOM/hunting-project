@@ -10,6 +10,7 @@ import 'swiper/css/navigation';
 import {Autoplay, Pagination, Navigation} from 'swiper/modules';
 
 import './mainSlider.css'
+import {NavLink} from "react-router-dom";
 
 export default function MainSlider() {
     return (
@@ -41,7 +42,9 @@ export default function MainSlider() {
                                         дикій місцевості.
                                     </div>
                                     <div>
-                                        <button className="slider__btn">Дізнатися більше</button>
+                                        <NavLink to='/aboutHunting'>
+                                            <button className="slider__btn">Дізнатися більше</button>
+                                        </NavLink>
                                     </div>
                                 </div>
                             </div>
@@ -60,7 +63,9 @@ export default function MainSlider() {
                                         взаємодійте з тваринами в їх природному середовищі і відчуйте незабутні емоції.
                                     </div>
                                     <div className="slider_button">
-                                        <button className="slider__btn">Дізнатися більше</button>
+                                        <NavLink to='/aboutHunting'>
+                                            <button className="slider__btn">Дізнатися більше</button>
+                                        </NavLink>
                                     </div>
                                 </div>
                             </div>
@@ -80,7 +85,9 @@ export default function MainSlider() {
                                         дізнайтесь нові культури і створіть незабутні спогади разом з нашою експедицією.
                                     </div>
                                     <div>
-                                        <button className="slider__btn">Дізнатися більше</button>
+                                        <NavLink to='/aboutHunting'>
+                                            <button className="slider__btn">Дізнатися більше</button>
+                                        </NavLink>
                                     </div>
                                 </div>
 
