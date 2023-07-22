@@ -1,4 +1,4 @@
-import {useParams} from "react-router-dom";
+import {NavLink, useParams} from "react-router-dom";
 import {listAboutAnimals} from "../../AboutAnimals/ListAboutAnimals/listAboutAnimals.js";
 import {birds} from "../../AboutAnimals/ListAboutAnimals/listAboutBirds.js";
 
@@ -26,7 +26,7 @@ const ItemDetails = () => {
                             <div className="itemDetails__description">{item.description}</div>
                             <div className="itemDetails__price">{item.price}</div>
                             <div className='itemDetails__btn'>
-                                <button className="itemDetails__button">Замовити</button>
+                                <button className="itemDetails__button"><NavLink to='/aboutForm'>Замовити</NavLink></button>
                             </div>
                         </div>
                     </div>

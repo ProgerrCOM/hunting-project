@@ -8,7 +8,7 @@ const Navbar = () => {
                     <li className='myNavbar__item'><NavLink to='/'>Головна</NavLink></li>
                     <li className='myNavbar__item'><NavLink to='/aboutHunting'>Про нас</NavLink></li>
                     <li className='myNavbar__item'><NavLink to='/aboutAnimals'>Про тварин</NavLink> </li>
-                    <li className='myNavbar__item'>Про платежі  </li>
+                    <li className='myNavbar__item'><NavLink to='/aboutForm'>Про платежі </NavLink> </li>
                 </ul>
             </div>
         </div>

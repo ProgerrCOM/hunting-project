@@ -1,0 +1,135 @@
+import {useState} from 'react';
+import './aboutFormContact.css'
+
+const AboutFormContact = () => {
+    const [firstName, setFirstName] = useState('');
+    const [lastName, setLastName] = useState('');
+    const [email, setEmail] = useState('');
+    const [phone, setPhone] = useState('');
+
+    const isValidEmail = (email) => {
+        const emailRegex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,})+$/;
+        return emailRegex.test(email);
+    };
+
+    const isValidPhoneNumber = (phone) => {
+        const phoneRegex = /^\d+$/;
+        return phoneRegex.test(phone);
+    };
+
+    const handleFormSubmit = (event) => {
+        event.preventDefault();
+
+        if (firstName.trim() === '') {
+            alert('Please enter your first name.');
+            return;
+        }
+
+        if (lastName.trim() === '') {
+            alert('Please enter your last name.');
+            return;
+        }
+
+        if (!isValidEmail(email)) {
+            alert('Please enter a valid email address.');
+            return;
+        }
+
+        if (!isValidPhoneNumber(phone)) {
+            alert('Please enter a valid phone number (numbers only).');
+            return;
+        }
+
+        alert('Form submitted successfully!');
+    };
+
+    const handlePhoneFocus = () => {
+        if (!phone) {
+            setPhone('+380');
+        }
+    };
+
+    const handlePhoneInput = (event) => {
+        let phoneNumber = event.target.value.replace(/[^\d+]/g, '');
+
+        if (!phoneNumber.startsWith('+')) {
+            phoneNumber = '+380' + phoneNumber;
+        }
+
+        setPhone(phoneNumber);
+    };
+
+    return (
+        <div className="aboutForm">
+            <div className="aboutForm__container _container">
+                <div className="aboutForm__contacts">
+                    <div className="aboutForm__contacts_container">
+                        <div className="verticalLine"></div>
+                        <div className="aboutForm__container__contacts__parameters">
+
+                                <p className="aboutForm__text"><a href="#" className="aboutForm__color">1-800-1234-678</a></p>
+                                <p className="aboutForm__text"><a href="#" className="aboutForm__color">1-800-9876-098</a></p>
+                        </div>
+                        <div className="verticalLine"></div>
+                        <div className="aboutForm__container__contacts__parameters">
+
+                                <p className="aboutForm__text"><a href="#"
+                                                                  className="aboutForm__color">info@demolink.org</a></p>
+                        </div>
+                        <div className="verticalLine"></div>
+                        <div className="aboutForm__container__contacts__parameters">
+
+                                <p className="aboutForm__text__geolocation aboutForm__text"><a href="#"
+                                                                                               className="aboutForm__color">2130
+                                    Fulton Street San Diego, CA 94117-1080 USA</a></p>
+                        </div>
+                        <div className="verticalLine"></div>
+                    </div>
+                </div>
+                <div className="main-container-date">
+                    <h3 className="title">CONTACT US</h3>
+                    <form className="form" onSubmit={handleFormSubmit}>
+                        <div className="input-group">
+                            <label htmlFor="first-name" className="text-input">First Name</label>
+                            <input type="text" id="first-name" className="input-contact" value={firstName}
+                                   onChange={(e) => setFirstName(e.target.value)}/>
+                        </div>
+                        <div className="input-group">
+                            <label htmlFor="last-name" className="text-input">Last Name</label>
+                            <input type="text" id="last-name" className="input-contact" value={lastName}
+                                   onChange={(e) => setLastName(e.target.value)}/>
+                        </div>
+                        <div className="input-group">
+                            <label htmlFor="email" className="text-input">E-mail</label>
+                            <input type="email" id="email" className="input-contact" value={email}
+                                   onChange={(e) => setEmail(e.target.value)}/>
+                        </div>
+                        <div className="input-group">
+                            <label htmlFor="phone" className="text-input">Phone</label>
+                            <input
+                                type="tel"
+                                id="phone"
+                                className="input-contact"
+                                value={phone}
+                                onFocus={handlePhoneFocus}
+                                onChange={handlePhoneInput}
+                                placeholder="+380"
+                            />
+                        </div>
+                        <div className="input-group input-group-message">
+                            <label htmlFor="message" className="text-input">Your Message</label>
+                            <textarea id="message" rows="4" className="input_message"></textarea>
+                        </div>
+                        <div className="button-row">
+                            <button type="submit" className="button-row_1">send message</button>
+                            <span className="text-input">or use</span>
+                            <a className="button-row_2" href="#" target="_blank">messenger</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+);
+};
+
+export default AboutFormContact;
