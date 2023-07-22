@@ -1,5 +1,5 @@
 .team {
-    background: #232426;
+    background: url(/src/assets/img/back-line2.png) center center, rgba(0,0,0,0.83);
 }
 
 .team__container {

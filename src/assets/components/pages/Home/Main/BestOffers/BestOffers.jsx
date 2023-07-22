@@ -14,7 +14,9 @@ const BestOffers = () => {
                         Партнерство з UPG ає нам можливість розвитку сфери та можливості відкритого полювання
                     </div>
                     <div className="bestOfferd__batton">
-                        <button>READ MORE</button>
+                        <button>
+                            <a href="https://upg.ua/">Дізнатися більше</a>
+                        </button>
                     </div>
                 </div>
             </div>

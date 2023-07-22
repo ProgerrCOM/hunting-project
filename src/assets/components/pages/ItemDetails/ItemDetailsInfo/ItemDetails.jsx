@@ -13,26 +13,29 @@ const ItemDetails = () => {
         birds.find((bird) => bird.id === parseInt(itemId));
 
     return (
-        <div className='itemDetails'>
-            <ItemDetailsMain/>
-            <div className="itemDetails__container _container">
-                {item && (
-                    <div className='itemDetails__info'>
-                        <div className='itemDetails__image'>
-                            <img className='itemDetails__img' src={item.img} alt=""/>
-                        </div>
-                        <div className="itemDetails__content">
-                            <div className="itemDetails__text">{item.text}</div>
-                            <div className="itemDetails__description">{item.description}</div>
-                            <div className="itemDetails__price">{item.price}</div>
-                            <div className='itemDetails__btn'>
-                                <button className="itemDetails__button"><NavLink to='/aboutForm'>Замовити</NavLink></button>
+        <div>
+            <div className='itemDetails'>
+                <ItemDetailsMain/>
+                <div className="itemDetails__container _container">
+                    {item && (
+                        <div className='itemDetails__info'>
+                            <div className='itemDetails__image'>
+                                <img className='itemDetails__img' src={item.img} alt=""/>
+                            </div>
+                            <div className="itemDetails__content">
+                                <div className="itemDetails__text">{item.text}</div>
+                                <div className="itemDetails__description">{item.description}</div>
+                                <div className="itemDetails__price">{item.price}</div>
+                                <div className='itemDetails__btn'>
+                                    <button className="itemDetails__button"><NavLink to='/aboutForm'>Замовити</NavLink>
+                                    </button>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                )}
-                <Properties/>
+                    )}
+                </div>
             </div>
+            <Properties/>
         </div>
     );
 };

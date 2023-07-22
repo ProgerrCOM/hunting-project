@@ -2,6 +2,7 @@
     width: 100%;
     height: 600px;
     padding: 40px 0;
+    background: url(/src/assets/img/back-line2.png) center center, rgba(0,0,0,0.83);
 }
 
 .mapAboutHunting__container {

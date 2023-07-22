@@ -4,6 +4,7 @@ import style from './header.module.css';
 import number from '/src/assets/img/number-icon.png';
 import LOGO from '/src/assets/img/LOGO.jpg';
 import BurgerMenu from './BurgerMenu/BurgerMenu.jsx';
+import {NavLink} from "react-router-dom";
 
 const Header = () => {
     const [isMobile, setIsMobile] = useState(false);
@@ -69,8 +70,8 @@ const Header = () => {
                             </div>
                         </div>
                         <div className={style.header__btn}>
-                            <button className={style.header__button} onClick={toggleBurgerMenu}>
-                                Request a call
+                            <button className={style.header__button}>
+                                <NavLink to='/aboutForm'>Request a call</NavLink>
                             </button>
                         </div>
                     </>

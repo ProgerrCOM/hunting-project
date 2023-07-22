@@ -1,5 +1,5 @@
 .aboutForm {
-    background: #232426;
+    background: url(/src/assets/img/back-line2.png) center center, rgba(0,0,0,0.83);
     padding-bottom: 100px   ;
 }
 
@@ -48,13 +48,18 @@
     font-size: 1.2em;
 }
 
+.main-container-form__content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
 /*CONTACT US*/
 .main-container-date {
     float: left;
     padding-top: 50px;
     width: 600px;
     margin: 0 auto;
-
 }
 .title {
     color: rgba(255, 255, 255, 0.5);
@@ -177,6 +182,21 @@ textarea {
 
 .input-contact:hover {
     background-color: rgba(0,0,0,0.1);
+}
+
+.mapAboutHuntingForm {
+    width: 100%;
+    height: 600px;
+    padding: 40px 0;
+    background: none;
+    display: flex;
+    justify-content: end;
+}
+
+.mapAboutHunting__containerForm {
+    width: 500px;
+    height: 100%;
+    border-radius: 30px;
 }
 
 /*Медіа запити*/

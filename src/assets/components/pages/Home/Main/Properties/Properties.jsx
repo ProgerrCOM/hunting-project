@@ -71,7 +71,7 @@ const Properties = () => {
                 <div className='properties__button'>
                     <NavLink to='/aboutAnimals'>
                         <button className="properties__btn">
-                            view More properties
+                            Дізнатися більше
                         </button>
                     </NavLink>
                 </div>

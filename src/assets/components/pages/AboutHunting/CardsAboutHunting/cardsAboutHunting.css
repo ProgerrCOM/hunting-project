@@ -4,7 +4,9 @@
 
 .cardsAboutHunting {
     padding-top: 70px;
+    background: url(/src/assets/img/back-line2.png) center center, rgba(0,0,0,0.83);
 }
+
 
 .cardsAboutHunting__container {
     display: flex;

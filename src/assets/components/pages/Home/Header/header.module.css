@@ -42,11 +42,9 @@
 }
 
 .header__button {
-    font-size: 15px;
     font-weight: bold;
     background: transparent;
     border: 1px solid #c5c5c5;
-    color: rgba(239,239,239,0.67);
     padding: 12px 40px;
     border-radius: 10px;
     box-shadow: 0 0 10px 1px  rgba(239,239,239,0.67);
@@ -56,6 +54,11 @@
 .header__button:hover {
     background: rgba(239,239,239,0.67);
     color: black;
+}
+
+.header__button a{
+    color: rgba(239,239,239,0.67);
+    font-size: 15px;
 }
 .header__logo_icon {
     width: 80px;

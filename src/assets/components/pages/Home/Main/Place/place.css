@@ -1,7 +1,7 @@
 .place {
     padding-top: 150px;
     padding-bottom: 1px;
-    background: #232426;
+    background: url(/src/assets/img/back-line2.png) center center, rgba(0,0,0,0.83);
 }
 
 .place__container {
@@ -47,10 +47,15 @@
 
 .palce__container__content {
     text-align: center;
-    padding-top: 20px;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     font-size: 15px;
     text-transform: uppercase;
     font-weight: bold;
+    background-color: #9a9a9a38;
+    border-radius: 9px;
+    color: rgba(255, 255, 255, 0.5);
 }
 
 .place__btn {

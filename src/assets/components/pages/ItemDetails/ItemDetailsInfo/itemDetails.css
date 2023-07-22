@@ -1,5 +1,5 @@
 .itemDetails {
-    background: #232426;
+    background: url(/src/assets/img/back-line2.png) center center, rgba(0,0,0,0.83);
 }
 
 .itemDetails__container {
@@ -60,7 +60,10 @@
 .itemDetails__button {
     padding: 15px 50px;
     background: rgba(98,115,27,0.45);
+    border-radius: 20px;
+}
+
+.itemDetails__button a {
     font-size: 20px;
     color: white;
-    border-radius: 20px;
 }

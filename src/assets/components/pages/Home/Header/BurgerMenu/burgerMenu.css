@@ -54,15 +54,18 @@
 }
 
 .burgerMenu__btn {
-    font-size: 15px;
     font-weight: bold;
     background: #527339;
     border: 1px solid #c5c5c5;
-    color: rgba(239,239,239,0.67);
     padding: 12px 40px;
     border-radius: 10px;
     box-shadow: 0 0 10px 1px rgba(239,239,239,0.67);
     transition: 0.5s;
+}
+
+.burgerMenu__btn a {
+    color: rgba(239,239,239,0.67);
+    font-size: 15px;
 }
 
 .burgerMenu__close {

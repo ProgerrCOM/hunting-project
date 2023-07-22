@@ -61,7 +61,10 @@
 .bestOfferd__batton button {
     padding: 13px 100px;
     background: rgba(98,115,27,0.65);
-    font-size: 20px;
-    color: white;
     border-radius: 20px;
+}
+
+.bestOfferd__batton button a {
+    color: white;
+    font-size: 20px;
 }

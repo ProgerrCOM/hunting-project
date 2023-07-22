@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import './burgerMenu.css';
+import {NavLink} from "react-router-dom";
 
 const BurgerMenu = ({ closeBurgerMenu }) => {
     const menuRef = useRef(null);
@@ -35,7 +36,7 @@ const BurgerMenu = ({ closeBurgerMenu }) => {
                     <a href="#">San Diego, CA 94117-1080</a>
                 </div>
                 <div className="burgerMenu__button">
-                    <button className="burgerMenu__btn">Request a call</button>
+                    <button className="burgerMenu__btn"><NavLink to='/aboutForm'>Request a call</NavLink></button>
                 </div>
             </div>
         </div>

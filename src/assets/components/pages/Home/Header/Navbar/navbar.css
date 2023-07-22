@@ -7,6 +7,12 @@
     z-index: 10;
 }
 
+.myNavbar__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .myNavbar__list {
     display: flex;
     align-items: center;
@@ -23,4 +29,10 @@
     color: rgba(255, 255, 255, 0.5);
     font-size: 21px;
     font-weight: 700;
+}
+
+.myNavbar__links {
+    display: flex;
+    gap: 20px;
+    color: rgba(255, 255, 255, 0.5);
 }

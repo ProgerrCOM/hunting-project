@@ -60,7 +60,7 @@ const Place = () => {
                 </div>
                 <div className='place__btn'>
                     <NavLink to='/aboutAnimals'>
-                        <button className='palce__button'> Hello world</button>
+                        <button className='palce__button'> Дізнатися більше</button>
                     </NavLink>
                 </div>
             </div>

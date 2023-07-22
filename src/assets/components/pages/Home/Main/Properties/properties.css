@@ -9,7 +9,7 @@ p {
 .properties {
     padding-top: 85px;
     padding-bottom: 85px;
-    background: #232426;
+    background: url(/src/assets/img/back-line2.png) center center, rgba(0,0,0,0.83);
 }
 
 .properties__content {
@@ -34,7 +34,6 @@ p {
     padding-bottom: 50px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     opacity: 0;
     transform: translateY(20px);
@@ -108,7 +107,7 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 50px;
+    padding-top: 15px;
 }
 
 .properties__btn {
