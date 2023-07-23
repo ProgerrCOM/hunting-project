@@ -87,23 +87,22 @@ const AboutFormContact = () => {
                         <div className="verticalLine"></div>
                         <div className="aboutForm__container__contacts__parameters">
 
-                            <p className="aboutForm__text"><a href="#" className="aboutForm__color">1-800-1234-678</a>
+                            <p className="aboutForm__text"><a href="#" className="aboutForm__color">+38-097-989-47-82</a>
                             </p>
-                            <p className="aboutForm__text"><a href="#" className="aboutForm__color">1-800-9876-098</a>
+                            <p className="aboutForm__text"><a href="#" className="aboutForm__color">+38-067-411-20-59</a>
                             </p>
                         </div>
                         <div className="verticalLine"></div>
                         <div className="aboutForm__container__contacts__parameters">
 
                             <p className="aboutForm__text"><a href="#"
-                                                              className="aboutForm__color">info@demolink.org</a></p>
+                                                              className="aboutForm__color">hunterviktor2008@gmail.com</a></p>
                         </div>
                         <div className="verticalLine"></div>
                         <div className="aboutForm__container__contacts__parameters">
 
                             <p className="aboutForm__text__geolocation aboutForm__text"><a href="#"
-                                                                                           className="aboutForm__color">2130
-                                Fulton Street San Diego, CA 94117-1080 USA</a></p>
+                                                                                           className="aboutForm__color">с. Сушки, Коростенський район,  Житомирська обл, Україна</a></p>
                         </div>
                         <div className="verticalLine"></div>
                     </div>

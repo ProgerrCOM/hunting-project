@@ -9,37 +9,37 @@ export const teams = [
     {
     id:1,
     img: team__1,
-    name:  "Nathalie Porter",
-    place: "Founder, Broker",
-    nomber: "1-800-1324-567",
-    info: "Ms. Porter founded our company in 1989 with a vision to help guests and residents of the USA to easily find and buy or rent real estate in all 50 states."
+    name:  "Бурянчук Василь Петрович",
+    place: "Єгер ТОВ СМГ Сушки ",
+    nomber: "---------",
+    info: "Бурянчук Василь Петровчи - стаж полювання понад 15 років."
     },
 {
 
     id: "2",
     img: team__2,
-    name: "John Thompson",
-    place: "Sales Associate",
+    name: "Мельник Євген Петрович",
+    place: "Єгер ТОВ СМГ Сушки",
     nomber: "1-800-1324-567",
-    info: "John has been in sales and marketing for the past 15 years. He has excellent knowledge about the local market both residential and commercial."
+    info: "Мельник Євген Петрович - стаж полювання понад 15 років."
     },
 {
 
     id:3,
     img: team__3,
-    name:"Brian Payne",
-    place: "Realtor",
+    name:"Тарасенко Леонід Олександрович",
+    place: "Єгер ТОВ СМГ Сушки",
     nomber: "1-800-1324-567",
-    info:"Brian is not only a Licensed Realtor but also holds the Title Producers and Mortgage Licenses, which makes him a very knowledgeable real estate expert."
+    info:"Мельник Євген Петрович - заступник директора ТОВ СМГ Сушки, стаж полювання понад 15 років."
     },
 {
 
     id: 4,
     img: team__4,
-    name: "Marie Fernandez",
-    place: "Broker",
+    name: "Грищенко Віктор Анатолійович",
+    place: "Єгер ТОВ СМГ Сушки",
     nomber: "1-800-1324-567",
-    info: "Marie’s goal is to provide clients with the highest level of marketing expertise and customer service to help them reach their uppermost real estate goals."
+    info: "Грищенко Віктор Анатолійович - директор ТОВ СМГ Сушки, стаж полювання понад 15 років."
     },
 
 

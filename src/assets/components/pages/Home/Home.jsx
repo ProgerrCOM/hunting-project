@@ -1,10 +1,21 @@
+import { useEffect } from "react";
 import Main from "./Main/Main.jsx";
-import Navbar from "./Header/Navbar/Navbar.jsx";
 
 const Home = () => {
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
+    };
+
+    useEffect(() => {
+        scrollToTop();
+    });
+
     return (
         <div>
-            <Main/>
+            <Main />
         </div>
     );
 };

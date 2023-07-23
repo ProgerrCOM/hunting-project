@@ -1,6 +1,7 @@
+
 .myNavbar {
     background: #232426;
-    box-shadow: 0 5px 10px 0px rgba(20, 20, 28, 0.3);
+    box-shadow: 0 5px 10px 0 rgba(20, 20, 28, 0.3);
     position: sticky;
     top: 0;
     padding: 15px 0;
@@ -13,26 +14,108 @@
     align-items: center;
 }
 
+.myNavbar__links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.myNavbar__links__item img {
+    width: 40px;
+    border-radius: 50%;
+}
+
 .myNavbar__list {
     display: flex;
     align-items: center;
     gap: 30px;
-    justify-content: end;
+    color: rgba(255, 255, 255, 0.5);
 }
 
-.myNavbar__item {
-    color: rgba(255, 255, 255, 0.5);
-    font-size: 21px;
-    font-weight: 700;
-}
 .myNavbar__item a {
     color: rgba(255, 255, 255, 0.5);
     font-size: 21px;
     font-weight: 700;
 }
 
-.myNavbar__links {
-    display: flex;
-    gap: 20px;
-    color: rgba(255, 255, 255, 0.5);
+.myNavbar.active .myNavbar__item a {
+    color: #fff;
+}
+
+.burger-button {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #fff;
+    transition: transform 0.2s ease-in-out;
+}
+
+.myNavbar.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(-45deg);
+}
+
+.myNavbar.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.myNavbar.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(45deg);
+}
+
+@media screen and (max-width: 768px) {
+
+    .myNavbar__container {
+        justify-content: flex-end;
+    }
+
+    .myNavbar__links {
+        display: none;
+    }
+
+    .myNavbar__list {
+        display: none;
+    }
+
+    .burger-button {
+        display: block;
+    }
+
+    .myNavbar.active .myNavbar__list {
+        display: flex;
+        flex-direction: column;
+        background-color: #232426;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 999;
+        padding: 10px;
+        box-shadow: 0 5px 10px 0 rgba(20, 20, 28, 0.3);
+        gap: 15px;
+    }
+
+    .myNavbar.active .myNavbar__item {
+        color: #fff;
+    }
+
+    .myNavbar.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(-45deg);
+    }
+
+    .myNavbar.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .myNavbar.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(45deg);
+    }
 }

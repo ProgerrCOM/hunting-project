@@ -5,8 +5,20 @@ import {birds} from "../../AboutAnimals/ListAboutAnimals/listAboutBirds.js";
 import './itemDetails.css'
 import Properties from "../../Home/Main/Properties/Properties.jsx";
 import ItemDetailsMain from "../ItemDetailsMain.jsx/ItemDetailsMain.jsx";
+import {useEffect} from "react";
 
 const ItemDetails = () => {
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
+    };
+
+    useEffect(() => {
+        scrollToTop();
+    });
+
     const {itemId} = useParams();
     const item =
         listAboutAnimals.find((animal) => animal.id === parseInt(itemId)) ||

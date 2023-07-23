@@ -13,7 +13,7 @@ const Header = () => {
     useEffect(() => {
         const handleResize = () => {
             const windowWidth = window.innerWidth;
-            setIsMobile(windowWidth <= 768);
+            setIsMobile(windowWidth <= 992);
             setShowBurgerMenu(false);
         };
 
@@ -47,11 +47,11 @@ const Header = () => {
                             </div>
                             <div className={style.number__content}>
                                 <a className={style.content__number} href="#">
-                                    1-800-1234-567
+                                    +38-097-989-47-82
                                 </a>
                                 <br />
                                 <a className={style.content__number} href="#">
-                                    1-800-8763-765
+                                    +38-067-411-20-59
                                 </a>
                             </div>
                         </div>
@@ -61,17 +61,17 @@ const Header = () => {
                             </div>
                             <div className={style.number__content}>
                                 <a className={style.content__number} href="#">
-                                    2130 Fulton Street
+                                    с. Сушки, Коростенський район
                                 </a>
                                 <br />
                                 <a className={style.content__number} href="#">
-                                    San Diego, CA 94117-1080
+                                    Житомирська обл, Україна
                                 </a>
                             </div>
                         </div>
                         <div className={style.header__btn}>
                             <button className={style.header__button}>
-                                <NavLink to='/aboutForm'>Request a call</NavLink>
+                                <NavLink to='/aboutForm'>Замовити полювання</NavLink>
                             </button>
                         </div>
                     </>
