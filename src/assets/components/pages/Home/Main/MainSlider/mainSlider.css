@@ -95,5 +95,42 @@
     color: white;
     border-radius: 20px;
 }
-.slider_button {
+
+@media (max-width: 768px) {
+    .slider__content {
+        height: 600px;
+        padding: 0 70px;
+    }
+    .slider__subtitle {
+        font-size: 40px;
+    }
+    .slider__title{
+        font-size: 50px;
+    }
+    .slider__text{
+        font-size: 15px;
+    }
+    .slider__btn {
+        padding: 15px 70px;
+    }
+}
+
+@media (max-width: 576px) {
+    .slider__content {
+        height: 550px;
+        padding: 0 50px;
+    }
+    .slider__subtitle {
+        font-size: 25px;
+    }
+    .slider__title{
+        font-size: 30px;
+    }
+    .slider__text{
+        font-size: 15px;
+    }
+    .slider__btn {
+        font-size: 12px;
+        padding: 15px 50px;
+    }
 }

@@ -67,3 +67,39 @@
     font-size: 20px;
     color: white;
 }
+
+@media (max-width: 1200px) {
+    .itemDetails__info {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .itemDetails__image {
+        width: 100%;
+        height: auto;
+        display: contents;
+    }
+    .itemDetails__img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 576px) {
+  .itemDetails__text {
+      font-size: 20px;
+  }
+    .itemDetails__description {
+        font-size: 12px;
+    }
+    .itemDetails__price {
+        font-size: 12px;
+    }
+    .itemDetails__button {
+        padding: 12px 20px;
+    }
+    .itemDetails__button a{
+        font-size: 15px;
+    }
+}

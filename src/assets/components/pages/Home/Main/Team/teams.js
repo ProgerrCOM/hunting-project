@@ -1,6 +1,6 @@
-import team__1 from "/src/assets/img/team-1.png"
-import team__2 from "/src/assets/img/team-2.png"
-import team__3 from "/src/assets/img/team-3.png"
+import team__1 from "/src/assets/img/team-1.jpg"
+import team__2 from "/src/assets/img/team-2.jpg"
+import team__3 from "/src/assets/img/team-3.jpg"
 import team__4 from "/src/assets/img/team-4.png"
 
 

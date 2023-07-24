@@ -48,9 +48,6 @@ const Team = () => {
                             <div className='team__text'>
                                 <div className="team__name">{team.name}</div>
                                 <div className="team__work">{team.place}</div>
-                                <div className="teem__png">
-                                    <img src="" alt="" />
-                                </div>
                                 <div className="team__number">{team.nomber}</div>
                                 <div className="team__info">{team.info}</div>
                             </div>

@@ -87,3 +87,34 @@
         width: 60%;
     }
 }
+
+@media (max-width: 576px) {
+    .team__main {
+        font-size: 28px;
+        padding-bottom: 30px;
+    }
+    .team__item {
+        display: flex;
+    }
+    .team_content {
+        width: 100%;
+        align-items: center;
+    }
+    .team__img {
+        width: 100%;
+        height: auto;
+    }
+    .team__img img {
+        width: 100%;
+        height: auto;
+    }
+    .team__name {
+        font-size: 18px;
+    }
+    .team__work {
+        font-size: 12px;
+    }
+    .team__info {
+        font-size: 12px;
+    }
+}

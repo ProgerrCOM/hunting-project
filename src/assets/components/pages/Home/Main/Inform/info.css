@@ -54,3 +54,18 @@
         gap: 20px;
     }
 }
+
+@media (max-width: 576px) {
+    .info__container {
+        display: flex;
+    }
+    .info__item {
+        width: 100%;
+    }
+    .info__img {
+        width: 25px;
+    }
+    .info__content__main {
+        font-size: 20px;
+    }
+}

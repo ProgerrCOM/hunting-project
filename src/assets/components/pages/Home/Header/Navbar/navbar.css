@@ -5,7 +5,7 @@
     position: sticky;
     top: 0;
     padding: 15px 0;
-    z-index: 10;
+    z-index: 100;
 }
 
 .myNavbar__container {

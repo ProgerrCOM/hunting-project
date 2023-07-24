@@ -22,6 +22,7 @@ p {
 
 .properties__title {
     display: flex;
+    text-align: center;
     align-items: center;
     justify-content: center;
     font-weight: 700;
@@ -119,6 +120,41 @@ p {
     text-transform: uppercase;
 }
 
+@media (max-width: 768px) {
+    .properties__image {
+        max-width: 100%;
+        height: auto;
+    }
+    .properties__image img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .post-modern-meta {
+        gap: 15px;
+    }
+   .properties__title {
+       font-size: 25px;
+   }
+    .properties__text {
+        font-size: 18px;
+    }
+    .content-original {
+        font-size: 12px;
+    }
+    .post-modern-meta li {
+        font-size: 12px;
+    }
+    .properties__history {
+        font-size: 12px;
+    }
+    .properties__btn {
+        padding: 15px 50px;
+        font-size: 15px;
+    }
+}
 
 
 

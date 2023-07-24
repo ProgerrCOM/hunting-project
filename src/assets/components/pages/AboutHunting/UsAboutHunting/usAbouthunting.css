@@ -47,3 +47,18 @@
     color: white;
     letter-spacing: 3px;
 }
+
+@media (max-width: 576px) {
+    .usAboutHunting__content {
+        padding: 30px 50px;
+        margin: 25px;
+        box-shadow: 0 0 20px 0 rgba(255,255,255,0.5);
+
+    }
+    .usAboutHunting__name {
+        font-size: 12px;
+    }
+    .usAboutHunting__info {
+        font-size: 30px;
+    }
+}

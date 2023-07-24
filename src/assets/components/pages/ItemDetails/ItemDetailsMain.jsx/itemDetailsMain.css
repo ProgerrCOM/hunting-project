@@ -44,3 +44,31 @@
     color: white;
     letter-spacing: 3px;
 }
+
+@media (max-width: 768px) {
+    .itemDetailsMain__content {
+        padding: 30px 70px;
+    }
+    .itemDetailsMain__name {
+        font-size: 15px;
+    }
+    .itemDetailsMain__info {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .itemDetailsMain__content {
+        padding: 30px 50px;
+    }
+    .itemDetailsMain__name {
+        font-size: 12px;
+    }
+    .itemDetailsMain__info {
+        font-size: 20px;
+    }
+    .itemDetailsMain__content {
+        margin: 25px;
+        box-shadow: 0 0 20px 0 rgba(255,255,255,0.5);
+    }
+}

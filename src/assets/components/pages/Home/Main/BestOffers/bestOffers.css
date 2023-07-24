@@ -1,5 +1,5 @@
 .bestOffers {
-    background-image: url(src/assets/img/bestOffers.jpg);
+    background-image: url(/src/assets/img/bestOffers.jpg);
     padding-top: 200px;
     padding-bottom: 200px;
     background-repeat: no-repeat;
@@ -68,4 +68,22 @@
 .bestOfferd__batton button a {
     color: white;
     font-size: 20px;
+}
+
+@media (max-width: 576px) {
+    .bestOffers__main {
+        font-size: 30px;
+        padding-bottom: 20px;
+    }
+    .bestOffers__month {
+        font-size: 15px;
+    }
+    .bestOffers__info {
+        font-size: 15px;
+        padding-bottom: 15px;
+        line-height: 130%;
+    }
+    .bestOfferd__batton button {
+        padding: 13px 50px;
+    }
 }

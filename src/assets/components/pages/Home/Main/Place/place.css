@@ -17,6 +17,7 @@
 
 .place__header {
     font-size: 38px;
+    text-align: center;
     line-height: 1.21053;
     padding-bottom: 15px;
     color: #b7b7b7;
@@ -86,5 +87,18 @@
     transform: translateY(0);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 576px) {
+    .place {
+        padding-top: 50px;
+    }
+    .place__header {
+        font-size: 28px;
+    }
+    .place__content {
+        font-size: 12px;
+    }
+    .palce__button {
+        padding: 15px 50px;
+        font-size: 15px;
+    }
 }

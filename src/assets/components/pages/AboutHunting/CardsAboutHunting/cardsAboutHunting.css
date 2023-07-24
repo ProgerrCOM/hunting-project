@@ -4,7 +4,7 @@
 
 .cardsAboutHunting {
     padding-top: 70px;
-    background: url(/src/assets/img/back-line2.png) center center, rgba(0,0,0,0.83);
+    background: url(/src/assets/img/back-line2.png) center center, rgba(0, 0, 0, 0.83);
 }
 
 
@@ -26,10 +26,10 @@
     justify-content: center;
     align-items: center;
     gap: 30px;
-    background: rgba(255,255,255,0.05);
+    background: rgba(255, 255, 255, 0.05);
     border-radius: 20px;
     padding: 30px;
-    box-shadow: 0 8px 0 rgba(255,255,255,0.13);
+    box-shadow: 0 8px 0 rgba(255, 255, 255, 0.13);
     transition: 1s;
 }
 
@@ -38,6 +38,7 @@
 }
 
 .cardsAboutHunting__title {
+    text-align: center;
     font-size: 25px;
     font-weight: bold;
     text-transform: uppercase;
@@ -60,16 +61,16 @@
     width: 450px;
     height: 250px;
     border-radius: 20px;
-    box-shadow: 0 0 30px 0 rgba(255,255,255,0.13);
+    box-shadow: 0 0 30px 0 rgba(255, 255, 255, 0.13);
     transition: 1s;
 }
 
-.cardsAboutHunting__img:hover{
-    box-shadow: 0 0 30px 0 rgba(255,255,255,0.20);
+.cardsAboutHunting__img:hover {
+    box-shadow: 0 0 30px 0 rgba(255, 255, 255, 0.20);
 }
 
 .cardsAboutHunting__conclusion {
-   max-width: 1000px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
@@ -77,12 +78,12 @@
 
 }
 
-.conclusion__text{
+.conclusion__text {
     text-align: center;
     font-size: 25px;
     color: white;
     line-height: 126%;
-    background: rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 20px;
     padding: 30px;
     margin-bottom: 40px;
@@ -97,6 +98,34 @@
 .cardsAboutHunting__item.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+@media (max-width: 992px) {
+    .cardsAboutHunting__container {
+        gap: 50px;
+    }
+
+    .cardsAboutHunting__item {
+        justify-content: center;
+    }
+
+    .cardsAboutHunting__card {
+        margin-bottom: 40px;
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .cardsAboutHunting__title {
+        font-size: 18px;
+    }
+
+    .cardsAboutHunting__text {
+        font-size: 12px;
+    }
+    .conclusion__text {
+        font-size: 18px;
+    }
 }
 
 

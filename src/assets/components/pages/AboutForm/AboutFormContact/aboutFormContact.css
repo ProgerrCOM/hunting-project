@@ -199,7 +199,26 @@ textarea {
     border-radius: 30px;
 }
 
-/*Медіа запити*/
+@media (max-width: 1200px) {
+    .main-container-form__content {
+        flex-direction: column;
+    }
+    .mapAboutHuntingForm {
+        display: flex;
+        justify-content: center;
+        width: 90%;
+        height: 600px;
+        padding: 40px 0;
+        margin: 0 auto;
+    }
+    .mapAboutHunting__containerForm {
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+    }
+}
+
+
 @media screen and (max-width: 450px) {
     .aboutForm__container {
         padding: 10px;

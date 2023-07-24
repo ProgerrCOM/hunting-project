@@ -80,3 +80,10 @@
     height: 3px;
     background: white;
 }
+
+@media (max-width: 576px) {
+    .header__logo_icon {
+        width: 60px;
+        height: 60px;
+    }
+}
