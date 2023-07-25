@@ -1,5 +1,4 @@
-
-import { useState, useEffect } from 'react';
+import {useState, useEffect} from 'react';
 import style from './header.module.css';
 import number from '/src/assets/img/number-icon.png';
 import LOGO from '/src/assets/img/LOGO.jpg';
@@ -37,19 +36,19 @@ const Header = () => {
         <div className={style.header}>
             <div className={style.header__container}>
                 <div className={style.header__logo}>
-                    <img className={style.header__logo_icon} src={LOGO} alt="" />
+                    <img className={style.header__logo_icon} src={LOGO} alt=""/>
                 </div>
                 {!isMobile && (
                     <>
                         <div className={style.contacts__number}>
                             <div className={style.number__icon}>
-                                <img className={style.number__img} src={number} alt="" />
+                                <img className={style.number__img} src={number} alt=""/>
                             </div>
                             <div className={style.number__content}>
                                 <a className={style.content__number} href="#">
                                     +38-097-989-47-82
                                 </a>
-                                <br />
+                                <br/>
                                 <a className={style.content__number} href="#">
                                     +38-067-411-20-59
                                 </a>
@@ -57,36 +56,26 @@ const Header = () => {
                         </div>
                         <div className={style.contacts__number}>
                             <div className={style.number__icon}>
-                                <img className={style.number__img} src={number} alt="" />
+                                <img className={style.number__img} src={number} alt=""/>
                             </div>
                             <div className={style.number__content}>
                                 <a className={style.content__number} href="#">
                                     с. Сушки, Коростенський район
                                 </a>
-                                <br />
+                                <br/>
                                 <a className={style.content__number} href="#">
                                     Житомирська обл, Україна
                                 </a>
                             </div>
                         </div>
-                        <div className={style.header__btn}>
-                            <button className={style.header__button}>
-                                <NavLink to='/aboutForm'>Замовити полювання</NavLink>
-                            </button>
-                        </div>
                     </>
                 )}
-                {isMobile && (
-                    <div className={style.burger__button}>
-                        <button className={style.burger__btn} onClick={toggleBurgerMenu}>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </button>
-                    </div>
-                )}
+                <div className={style.header__btn}>
+                    <button className={style.header__button}>
+                        <NavLink to='/aboutForm'>Замовити полювання</NavLink>
+                    </button>
+                </div>
             </div>
-            {showBurgerMenu && <BurgerMenu closeBurgerMenu={closeBurgerMenu} />}
         </div>
     );
 };

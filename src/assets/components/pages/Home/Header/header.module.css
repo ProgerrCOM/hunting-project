@@ -52,7 +52,7 @@
 }
 
 .header__button:hover {
-    background: rgba(239,239,239,0.67);
+    background: rgba(239,239,239,0.3);
     color: black;
 }
 
@@ -85,5 +85,11 @@
     .header__logo_icon {
         width: 60px;
         height: 60px;
+    }
+    .header__button {
+        padding: 12px 20px;
+    }
+    .header__button a {
+        font-size: 12px;
     }
 }

@@ -121,10 +121,18 @@
     }
 
     .cardsAboutHunting__text {
-        font-size: 12px;
+        font-size: 15px;
     }
     .conclusion__text {
         font-size: 18px;
+    }
+}
+
+
+@media (max-width: 576px) {
+    .cardsAboutHunting__img {
+        width: 100%;
+        height: auto;
     }
 }
 

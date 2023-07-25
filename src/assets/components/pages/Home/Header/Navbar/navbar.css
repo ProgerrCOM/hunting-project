@@ -93,18 +93,27 @@
         display: flex;
         flex-direction: column;
         background-color: #232426;
+        opacity: 0.95;
         position: absolute;
         top: 100%;
-        left: 0;
         right: 0;
         z-index: 999;
-        padding: 10px;
         box-shadow: 0 5px 10px 0 rgba(20, 20, 28, 0.3);
-        gap: 15px;
+        gap: 30px;
+        padding: 60px 50px;
+        border-radius: 20px;
     }
 
     .myNavbar.active .myNavbar__item {
-        color: #fff;
+        color: rgba(239,239,239,0.67);
+        border: 1px solid #c5c5c5;
+        padding: 10px 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px 0 rgba(239,239,239,0.67);
+    }
+
+    .myNavbar.active .myNavbar__item a {
+        color: rgba(239,239,239,0.67);
     }
 
     .myNavbar.active .bar:nth-child(1) {

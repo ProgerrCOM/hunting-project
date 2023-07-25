@@ -109,15 +109,15 @@ const AboutFormContact = () => {
                 </div>
                 <div className='main-container-form__content'>
                     <div className="main-container-date">
-                        <h3 className="title">CONTACT US</h3>
+                        <h3 className="title">Замовлення</h3>
                         <form className="form" onSubmit={handleFormSubmit}>
                             <div className="input-group">
-                                <label htmlFor="first-name" className="text-input">First Name</label>
+                                <label htmlFor="first-name" className="text-input">Ім'я</label>
                                 <input type="text" id="first-name" className="input-contact" value={firstName}
                                        onChange={(e) => setFirstName(e.target.value)}/>
                             </div>
                             <div className="input-group">
-                                <label htmlFor="last-name" className="text-input">Last Name</label>
+                                <label htmlFor="last-name" className="text-input">По батькові</label>
                                 <input type="text" id="last-name" className="input-contact" value={lastName}
                                        onChange={(e) => setLastName(e.target.value)}/>
                             </div>
@@ -127,7 +127,7 @@ const AboutFormContact = () => {
                                        onChange={(e) => setEmail(e.target.value)}/>
                             </div>
                             <div className="input-group">
-                                <label htmlFor="phone" className="text-input">Phone</label>
+                                <label htmlFor="phone" className="text-input">Номер телефону</label>
                                 <input
                                     type="tel"
                                     id="phone"
@@ -139,13 +139,13 @@ const AboutFormContact = () => {
                                 />
                             </div>
                             <div className="input-group input-group-message">
-                                <label htmlFor="message" className="text-input">Your Message</label>
+                                <label htmlFor="message" className="text-input">Ваші побажання</label>
                                 <textarea id="message" rows="4" className="input_message"></textarea>
                             </div>
                             <div className="button-row">
-                                <button type="submit" className="button-row_1">send message</button>
-                                <span className="text-input">or use</span>
-                                <a className="button-row_2" href="#" target="_blank">messenger</a>
+                                <button type="submit" className="button-row_1">Відправити повідомлення</button>
+                                <span className="text-input">чи використати</span>
+                                <a className="button-row_2" href="#" target="_blank">Повідомлення</a>
                             </div>
                         </form>
                     </div>

@@ -3,7 +3,7 @@
     position: absolute;
     top: 30px;
     right: 0;
-    z-index: 11;
+    z-index: 101;
     border-radius: 30px;
 }
 
@@ -101,3 +101,4 @@
 .close2 {
     transform: rotate(-45deg);
 }
+

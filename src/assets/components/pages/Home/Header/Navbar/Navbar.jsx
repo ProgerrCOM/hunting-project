@@ -1,5 +1,4 @@
-// Navbar.js
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './navbar.css';
 import { NavLink } from 'react-router-dom';
 import facebook from '../../../../../img/facebook.svg';
@@ -8,13 +7,32 @@ import UPG from '../../../../../img/UPG.webp';
 
 const Navbar = () => {
     const [showBurgerMenu, setShowBurgerMenu] = useState(false);
+    const burgerRef = useRef(null);
 
     const handleBurgerMenuToggle = () => {
         setShowBurgerMenu(!showBurgerMenu);
     };
 
+    useEffect(() => {
+        const handleOutsideClick = (event) => {
+            if (burgerRef.current && !burgerRef.current.contains(event.target)) {
+                setShowBurgerMenu(false);
+            }
+        };
+
+        document.body.addEventListener('click', handleOutsideClick);
+
+        return () => {
+            document.body.removeEventListener('click', handleOutsideClick);
+        };
+    }, []);
+
+    const handleLinkClick = () => {
+        setShowBurgerMenu(false);
+    };
+
     return (
-        <div className={`myNavbar ${showBurgerMenu ? 'active' : ''}`}>
+        <div className={`myNavbar ${showBurgerMenu ? 'active' : ''}`} ref={burgerRef}>
             <div className="myNavbar__container _container">
                 <ul className="myNavbar__links">
                     <li className="myNavbar__links__item">
@@ -29,16 +47,16 @@ const Navbar = () => {
                 </ul>
                 <ul className={`myNavbar__list ${showBurgerMenu ? 'active' : ''}`}>
                     <li className="myNavbar__item">
-                        <NavLink to="/">Головна</NavLink>
+                        <NavLink to="/" onClick={handleLinkClick}>Головна</NavLink>
                     </li>
                     <li className="myNavbar__item">
-                        <NavLink to="/aboutHunting">Про нас</NavLink>
+                        <NavLink to="/aboutHunting" onClick={handleLinkClick}>Про нас</NavLink>
                     </li>
                     <li className="myNavbar__item">
-                        <NavLink to="/aboutAnimals">Про тварин</NavLink>
+                        <NavLink to="/aboutAnimals" onClick={handleLinkClick}>Про тварин</NavLink>
                     </li>
                     <li className="myNavbar__item">
-                        <NavLink to="/aboutForm">Про платежі</NavLink>
+                        <NavLink to="/aboutForm" onClick={handleLinkClick}>Про платежі</NavLink>
                     </li>
                 </ul>
                 <button className="burger-button" onClick={handleBurgerMenuToggle}>
