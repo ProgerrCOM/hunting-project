@@ -68,8 +68,31 @@
     color: white;
 }
 
+.itemDetails__specification {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.5);
+    background: rgba(255,255,255,0.05);
+    padding: 40px 50px;
+    border-radius: 30px;
+}
+ .specification__image img  {
+     border-radius: 20px;
+     max-width: 500px;
+ }
+
+.specification__text {
+    font-size: 20px;
+}
+
 @media (max-width: 1200px) {
     .itemDetails__info {
+        flex-direction: column;
+    }
+    .itemDetails__specification {
+        display: flex;
         flex-direction: column;
     }
 }
@@ -83,6 +106,12 @@
     .itemDetails__img {
         width: 100%;
         height: auto;
+    }
+    .itemDetails__specification {
+        padding: 40px 30px;
+    }
+    .specification__image img {
+        max-width: 100%;
     }
 }
 

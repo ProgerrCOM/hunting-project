@@ -1,0 +1,15 @@
+
+.weather__temp a {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 21px;
+}
+
+.weather__temp span {
+    color: #527339;
+}
+
+@media (max-width: 576px) {
+    .weather__temp a {
+        font-size: 18px;
+    }
+}

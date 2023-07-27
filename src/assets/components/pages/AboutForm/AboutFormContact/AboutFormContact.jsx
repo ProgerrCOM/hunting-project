@@ -1,13 +1,24 @@
-import {useState} from 'react';
-import React, {useEffect, useRef} from 'react';
+import { useState, useEffect, useRef } from 'react';
+import React from 'react';
 import L from 'leaflet';
-import './aboutFormContact.css'
+import './aboutFormContact.css';
 
 const AboutFormContact = () => {
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
+    const [formErrors, setFormErrors] = useState({});
+
+    const [isMessageInputFocused, setMessageInputFocused] = useState(false);
+
+    const handleFocusMessageInput = () => {
+        setMessageInputFocused(true);
+    };
+
+    const handleBlurMessageInput = () => {
+        setMessageInputFocused(false);
+    };
 
     const mapRef = useRef(null);
 
@@ -33,34 +44,38 @@ const AboutFormContact = () => {
     };
 
     const isValidPhoneNumber = (phone) => {
-        const phoneRegex = /^\d+$/;
+        const phoneRegex = /^\+380\d{9}$/;
         return phoneRegex.test(phone);
     };
 
     const handleFormSubmit = (event) => {
         event.preventDefault();
 
+        const errors = {};
+
         if (firstName.trim() === '') {
-            alert('Please enter your first name.');
-            return;
+            errors.firstName = 'Будь ласка, напишіть ваше ім`я.';
         }
 
         if (lastName.trim() === '') {
-            alert('Please enter your last name.');
-            return;
+            errors.lastName = 'Будь ласка, напишіть ваше прізвище.';
         }
 
         if (!isValidEmail(email)) {
-            alert('Please enter a valid email address.');
-            return;
+            errors.email = 'Будь ласка напишіть ваш Email.';
         }
 
         if (!isValidPhoneNumber(phone)) {
-            alert('Please enter a valid phone number (numbers only).');
-            return;
+            errors.phone = 'Будь ласка напишіть ваш номер телефону';
         }
 
-        alert('Form submitted successfully!');
+        setFormErrors(errors);
+
+        if (Object.keys(errors).length === 0) {
+            setFormErrors({});
+            // Form submission logic here
+            alert('Form submitted successfully!');
+        }
     };
 
     const handlePhoneFocus = () => {
@@ -69,12 +84,17 @@ const AboutFormContact = () => {
         }
     };
 
-    const handlePhoneInput = (event) => {
-        let phoneNumber = event.target.value.replace(/[^\d+]/g, '');
 
-        if (!phoneNumber.startsWith('+')) {
+    const handlePhoneInput = (event) => {
+        let phoneNumber = event.target.value.replace(/[^\d]/g, '');
+
+        if (phoneNumber.startsWith('380')) {
+            phoneNumber = '+380' + phoneNumber.slice(3);
+        } else if (!phoneNumber.startsWith('+380')) {
             phoneNumber = '+380' + phoneNumber;
         }
+
+        phoneNumber = phoneNumber.slice(0, 13);
 
         setPhone(phoneNumber);
     };
@@ -87,22 +107,22 @@ const AboutFormContact = () => {
                         <div className="verticalLine"></div>
                         <div className="aboutForm__container__contacts__parameters">
 
-                            <p className="aboutForm__text"><a href="#" className="aboutForm__color">+38-097-989-47-82</a>
+                            <p className="aboutForm__text"><a href="tel:+380979894782" className="aboutForm__color">+38-097-989-47-82</a>
                             </p>
-                            <p className="aboutForm__text"><a href="#" className="aboutForm__color">+38-067-411-20-59</a>
+                            <p className="aboutForm__text"><a href="tel:+380674112059" className="aboutForm__color">+38-067-411-20-59</a>
                             </p>
                         </div>
                         <div className="verticalLine"></div>
                         <div className="aboutForm__container__contacts__parameters">
 
-                            <p className="aboutForm__text"><a href="#"
+                            <p className="aboutForm__text"><a target='_blank' href="https://www.google.com/intl/uk/gmail/about/"
                                                               className="aboutForm__color">hunterviktor2008@gmail.com</a></p>
                         </div>
                         <div className="verticalLine"></div>
                         <div className="aboutForm__container__contacts__parameters">
 
-                            <p className="aboutForm__text__geolocation aboutForm__text"><a href="#"
-                                                                                           className="aboutForm__color">с. Сушки, Коростенський район,  Житомирська обл, Україна</a></p>
+                            <p className="aboutForm__text__geolocation aboutForm__text">
+                                <a target='_blank' href="https://goo.gl/maps/3SjQdjLDuGMQzRPw8" className="aboutForm__color">с. Сушки, Коростенський район,  Житомирська обл, Україна</a></p>
                         </div>
                         <div className="verticalLine"></div>
                     </div>
@@ -115,16 +135,19 @@ const AboutFormContact = () => {
                                 <label htmlFor="first-name" className="text-input">Ім'я</label>
                                 <input type="text" id="first-name" className="input-contact" value={firstName}
                                        onChange={(e) => setFirstName(e.target.value)}/>
+                                {formErrors.firstName && <p className="error-message">{formErrors.firstName}</p>}
                             </div>
                             <div className="input-group">
                                 <label htmlFor="last-name" className="text-input">По батькові</label>
                                 <input type="text" id="last-name" className="input-contact" value={lastName}
                                        onChange={(e) => setLastName(e.target.value)}/>
+                                {formErrors.lastName && <p className="error-message">{formErrors.lastName}</p>}
                             </div>
                             <div className="input-group">
                                 <label htmlFor="email" className="text-input">E-mail</label>
                                 <input type="email" id="email" className="input-contact" value={email}
                                        onChange={(e) => setEmail(e.target.value)}/>
+                                {formErrors.email && <p className="error-message">{formErrors.email}</p>}
                             </div>
                             <div className="input-group">
                                 <label htmlFor="phone" className="text-input">Номер телефону</label>
@@ -137,15 +160,21 @@ const AboutFormContact = () => {
                                     onChange={handlePhoneInput}
                                     placeholder="+380"
                                 />
+                                {formErrors.phone && <p className="error-message">{formErrors.phone}</p>}
                             </div>
                             <div className="input-group input-group-message">
                                 <label htmlFor="message" className="text-input">Ваші побажання</label>
-                                <textarea id="message" rows="4" className="input_message"></textarea>
+                                <textarea
+                                    placeholder={isMessageInputFocused ? '' : 'Напишіть текст...'}
+                                    id="message"
+                                    rows="4"
+                                    className="input_message"
+                                    onFocus={handleFocusMessageInput}
+                                    onBlur={handleBlurMessageInput}
+                                ></textarea>
                             </div>
                             <div className="button-row">
                                 <button type="submit" className="button-row_1">Відправити повідомлення</button>
-                                <span className="text-input">чи використати</span>
-                                <a className="button-row_2" href="#" target="_blank">Повідомлення</a>
                             </div>
                         </form>
                     </div>

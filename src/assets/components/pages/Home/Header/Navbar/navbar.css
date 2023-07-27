@@ -17,7 +17,7 @@
 .myNavbar__links {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 20px;
     color: rgba(255, 255, 255, 0.5);
 }
 
@@ -71,10 +71,10 @@
     transform: translateY(-8px) rotate(45deg);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
 
     .myNavbar__container {
-        justify-content: flex-end;
+        justify-content: space-between;
     }
 
     .myNavbar__links {

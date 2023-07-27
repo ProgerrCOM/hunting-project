@@ -34,8 +34,8 @@ export default function MainSlider() {
                         <div className='slider__main-container'>
                             <div className="slider__container _container">
                                 <div className='slider__content'>
-                                    <div className="slider__subtitle">МИСЛИВСЬКЕ ГОСПОДАРСТВО</div>
-                                    <div className="slider__title">"СУШКИ"</div>
+                                    <h2 className="slider__subtitle">МИСЛИВСЬКЕ ГОСПОДАРСТВО</h2>
+                                    <h1 className="slider__title">"СУШКИ"</h1>
                                     <div className="slider__text">Полювання – це справжня пригода, що дозволяє
                                         зблизитися з природою, випробувати адреналін та насолодитися історичними
                                         традиціями. Відчуйте свободу та захоплюючість, вирушивши у пошуках емоцій в
@@ -56,8 +56,8 @@ export default function MainSlider() {
                         <div className="slider__main-container">
                             <div className="slider__container _container">
                                 <div className="slider__content">
-                                    <div className="slider__subtitle">Полювання</div>
-                                    <div className="slider__title">Отримайте незабутні враження</div>
+                                    <h2 className="slider__subtitle">Полювання</h2>
+                                    <h1 className="slider__title">Отримайте незабутні враження</h1>
                                     <div className="slider__text">Приєднуйтесь до наших полювань, щоб відчути
                                         задоволення від зароблених трофеїв. Зустрічайте виклики дикої природи,
                                         взаємодійте з тваринами в їх природному середовищі і відчуйте незабутні емоції.
@@ -77,8 +77,8 @@ export default function MainSlider() {
                         <div className="slider__main-container">
                             <div className="slider__container _container">
                                 <div className="slider__content">
-                                    <div className="slider__subtitle">Охотницька експедиція</div>
-                                    <div className="slider__title">Відправляйтеся у подорож з нами</div>
+                                    <h2 className="slider__subtitle">Охотницька експедиція</h2>
+                                    <h1 className="slider__title">Відправляйтеся у подорож з нами</h1>
                                     <div className="slider__text">Охотницька експедиція - це можливість дослідити різні
                                         куточки землі та насолодитися унікальним досвідом. Ми пропонуємо організовані
                                         поїздки для мисливців будь-якого рівня підготовки. Зануртесь у світ полювання,

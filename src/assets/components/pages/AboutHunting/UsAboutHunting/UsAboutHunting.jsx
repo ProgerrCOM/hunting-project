@@ -7,12 +7,12 @@ const UsAboutHunting = () => {
             <div className="usAboutHunting--container">
                 <div className="usAboutHunting__container _container">
                     <div className='usAboutHunting__content'>
-                        <div className="usAboutHunting__name">
+                        <h2 className="usAboutHunting__name">
                             --- Про нас
-                        </div>
-                        <div className="usAboutHunting__info">
+                        </h2>
+                        <h1 className="usAboutHunting__info">
                             Про нас
-                        </div>
+                        </h1>
                     </div>
                 </div>
             </div>

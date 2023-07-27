@@ -7,13 +7,11 @@ import {NavLink} from "react-router-dom";
 
 const Header = () => {
     const [isMobile, setIsMobile] = useState(false);
-    const [showBurgerMenu, setShowBurgerMenu] = useState(false);
 
     useEffect(() => {
         const handleResize = () => {
             const windowWidth = window.innerWidth;
             setIsMobile(windowWidth <= 992);
-            setShowBurgerMenu(false);
         };
 
         handleResize();
@@ -23,14 +21,6 @@ const Header = () => {
             window.removeEventListener('resize', handleResize);
         };
     }, []);
-
-    const toggleBurgerMenu = () => {
-        setShowBurgerMenu((prevShowBurgerMenu) => !prevShowBurgerMenu);
-    };
-
-    const closeBurgerMenu = () => {
-        setShowBurgerMenu(false);
-    };
 
     return (
         <div className={style.header}>
@@ -45,11 +35,11 @@ const Header = () => {
                                 <img className={style.number__img} src={number} alt=""/>
                             </div>
                             <div className={style.number__content}>
-                                <a className={style.content__number} href="#">
+                                <a className={style.content__number} href="tel:+380979894782">
                                     +38-097-989-47-82
                                 </a>
                                 <br/>
-                                <a className={style.content__number} href="#">
+                                <a className={style.content__number} href="tel:+380674112059">
                                     +38-067-411-20-59
                                 </a>
                             </div>
