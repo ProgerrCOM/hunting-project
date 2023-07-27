@@ -49,11 +49,11 @@ const Header = () => {
                                 <img className={style.number__img} src={number} alt=""/>
                             </div>
                             <div className={style.number__content}>
-                                <a className={style.content__number} href="#">
+                                <a className={style.content__number} target="_blank" href="https://goo.gl/maps/EP7XM68wsKCNeY1X9">
                                     с. Сушки, Коростенський район
                                 </a>
                                 <br/>
-                                <a className={style.content__number} href="#">
+                                <a className={style.content__number} target="_blank" href="https://goo.gl/maps/EP7XM68wsKCNeY1X9">
                                     Житомирська обл, Україна
                                 </a>
                             </div>
