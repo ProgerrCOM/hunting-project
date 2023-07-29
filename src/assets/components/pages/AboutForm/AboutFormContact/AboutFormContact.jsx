@@ -1,7 +1,7 @@
-import { useState, useEffect, useRef } from 'react';
-import React from 'react';
-import L from 'leaflet';
+import { useState } from 'react';
+import emailjs from 'emailjs-com';
 import './aboutFormContact.css';
+import Map from "../../Map/Map.jsx";
 
 const AboutFormContact = () => {
     const [firstName, setFirstName] = useState('');
@@ -19,22 +19,6 @@ const AboutFormContact = () => {
     const handleBlurMessageInput = () => {
         setMessageInputFocused(false);
     };
-
-    const mapRef = useRef(null);
-
-    useEffect(() => {
-        if (!mapRef.current) {
-            const map = L.map('map').setView([50.8128, 28.2374], 10);
-
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
-            }).addTo(map);
-
-            L.marker([50.8128, 28.2374]).addTo(map).bindPopup('Сушки').openPopup();
-
-            mapRef.current = map;
-        }
-    }, []);
 
     const isValidEmail = (email) => {
         const emailRegex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,})+$/;
@@ -70,9 +54,20 @@ const AboutFormContact = () => {
         setFormErrors(errors);
 
         if (Object.keys(errors).length === 0) {
-            setFormErrors({});
-            // Form submission logic here
-            alert('Form submitted successfully!');
+            emailjs.send('сюда id сервера', 'сюда id нашего шаблона', {
+                from_name: firstName,
+                last_name: lastName,
+                email,
+                phone,
+            }, 'your_user_id')
+                .then((response) => {
+                    alert('Form submitted successfully!');
+                })
+                .catch((error) => {
+                    // Handle errors, if any
+                    console.error('Error submitting form:', error);
+                    alert('Error submitting form. Please try again later.');
+                });
         }
     };
 
@@ -81,7 +76,6 @@ const AboutFormContact = () => {
             setPhone('+380');
         }
     };
-
 
     const handlePhoneInput = (event) => {
         let phoneNumber = event.target.value.replace(/[^\d]/g, '');
@@ -104,23 +98,16 @@ const AboutFormContact = () => {
                     <div className="aboutForm__contacts_container">
                         <div className="verticalLine"></div>
                         <div className="aboutForm__container__contacts__parameters">
-
-                            <p className="aboutForm__text"><a href="tel:+380979894782" className="aboutForm__color">+38-097-989-47-82</a>
-                            </p>
-                            <p className="aboutForm__text"><a href="tel:+380674112059" className="aboutForm__color">+38-067-411-20-59</a>
-                            </p>
+                            <p className="aboutForm__text"><a href="tel:+380979894782" className="aboutForm__color">+38-097-989-47-82</a></p>
+                            <p className="aboutForm__text"><a href="tel:+380674112059" className="aboutForm__color">+38-067-411-20-59</a></p>
                         </div>
                         <div className="verticalLine"></div>
                         <div className="aboutForm__container__contacts__parameters">
-
-                            <p className="aboutForm__text"><a target='_blank' href="https://www.google.com/intl/uk/gmail/about/"
-                                                              className="aboutForm__color">hunterviktor2008@gmail.com</a></p>
+                            <p className="aboutForm__text"><a target='_blank' href="https://www.google.com/intl/uk/gmail/about/" className="aboutForm__color">hunterviktor2008@gmail.com</a></p>
                         </div>
                         <div className="verticalLine"></div>
                         <div className="aboutForm__container__contacts__parameters">
-
-                            <p className="aboutForm__text__geolocation aboutForm__text">
-                                <a target='_blank' href="https://goo.gl/maps/3SjQdjLDuGMQzRPw8" className="aboutForm__color">с. Сушки, Коростенський район,  Житомирська обл, Україна</a></p>
+                            <p className="aboutForm__text__geolocation aboutForm__text"><a target='_blank' href="https://goo.gl/maps/3SjQdjLDuGMQzRPw8" className="aboutForm__color">с. Сушки, Коростенський район,  Житомирська обл, Україна</a></p>
                         </div>
                         <div className="verticalLine"></div>
                     </div>
@@ -131,20 +118,17 @@ const AboutFormContact = () => {
                         <form className="form" onSubmit={handleFormSubmit}>
                             <div className="input-group">
                                 <label htmlFor="first-name" className="text-input">Ім'я</label>
-                                <input type="text" id="first-name" className="input-contact" value={firstName}
-                                       onChange={(e) => setFirstName(e.target.value)}/>
+                                <input type="text" id="first-name" className="input-contact" value={firstName} onChange={(e) => setFirstName(e.target.value)}/>
                                 {formErrors.firstName && <p className="error-message">{formErrors.firstName}</p>}
                             </div>
                             <div className="input-group">
                                 <label htmlFor="last-name" className="text-input">По батькові</label>
-                                <input type="text" id="last-name" className="input-contact" value={lastName}
-                                       onChange={(e) => setLastName(e.target.value)}/>
+                                <input type="text" id="last-name" className="input-contact" value={lastName} onChange={(e) => setLastName(e.target.value)}/>
                                 {formErrors.lastName && <p className="error-message">{formErrors.lastName}</p>}
                             </div>
                             <div className="input-group">
                                 <label htmlFor="email" className="text-input">E-mail</label>
-                                <input type="email" id="email" className="input-contact" value={email}
-                                       onChange={(e) => setEmail(e.target.value)}/>
+                                <input type="email" id="email" className="input-contact" value={email} onChange={(e) => setEmail(e.target.value)}/>
                                 {formErrors.email && <p className="error-message">{formErrors.email}</p>}
                             </div>
                             <div className="input-group">
@@ -177,7 +161,7 @@ const AboutFormContact = () => {
                         </form>
                     </div>
                     <div className='mapAboutHuntingForm'>
-                        <div id="map" className="mapAboutHunting__containerForm"></div>
+                        <Map/>
                     </div>
                 </div>
             </div>
