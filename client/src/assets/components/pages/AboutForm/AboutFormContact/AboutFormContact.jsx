@@ -8,6 +8,7 @@ const AboutFormContact = () => {
     const [lastName, setLastName] = useState('');
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
+    const [message, setMessage] = useState('');
     const [formErrors, setFormErrors] = useState({});
 
     const [isMessageInputFocused, setMessageInputFocused] = useState(false);
@@ -59,6 +60,7 @@ const AboutFormContact = () => {
                 last_name: lastName,
                 email,
                 phone,
+                message
             }, 'bReY04ACp-ibmkKBL')
                 .then((response) => {
                     alert('Form submitted successfully!');
@@ -152,6 +154,8 @@ const AboutFormContact = () => {
                                     className="input_message"
                                     onFocus={handleFocusMessageInput}
                                     onBlur={handleBlurMessageInput}
+                                    value={message}
+                                    onChange={(e) => setMessage(e.target.value)}
                                 ></textarea>
                             </div>
                             <div className="button-row">

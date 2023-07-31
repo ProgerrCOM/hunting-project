@@ -2,7 +2,6 @@ import {useState, useEffect} from 'react';
 import style from './header.module.css';
 import number from '/src/assets/img/number-icon.png';
 import LOGO from '/src/assets/img/LOGO.jpg';
-import BurgerMenu from './BurgerMenu/BurgerMenu.jsx';
 import {NavLink} from "react-router-dom";
 
 const Header = () => {
@@ -26,7 +25,7 @@ const Header = () => {
         <div className={style.header}>
             <div className={style.header__container}>
                 <div className={style.header__logo}>
-                    <img className={style.header__logo_icon} src={LOGO} alt=""/>
+                    <NavLink to='/'><img className={style.header__logo_icon} src={LOGO} alt=""/></NavLink>
                 </div>
                 {!isMobile && (
                     <>
@@ -49,11 +48,13 @@ const Header = () => {
                                 <img className={style.number__img} src={number} alt=""/>
                             </div>
                             <div className={style.number__content}>
-                                <a className={style.content__number} target="_blank" href="https://goo.gl/maps/EP7XM68wsKCNeY1X9">
+                                <a className={style.content__number} target="_blank"
+                                   href="https://goo.gl/maps/EP7XM68wsKCNeY1X9">
                                     с. Сушки, Коростенський район
                                 </a>
                                 <br/>
-                                <a className={style.content__number} target="_blank" href="https://goo.gl/maps/EP7XM68wsKCNeY1X9">
+                                <a className={style.content__number} target="_blank"
+                                   href="https://goo.gl/maps/EP7XM68wsKCNeY1X9">
                                     Житомирська обл, Україна
                                 </a>
                             </div>

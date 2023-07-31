@@ -21,7 +21,7 @@ app.post('/send-email', (req, res) => {
         message,
     };
 
-    emailjs.send('service_7mdjar77', 'template_5dwcmbm', emailData, 'bReY04ACp')
+    emailjs.send('service_7mdjar77', 'template_5dwcmbm', emailData, 'bReY04ACp-ibmkKBL')
         .then(() => {
             console.log('Email sent successfully!');
             res.json({ message: 'Email sent successfully!' });

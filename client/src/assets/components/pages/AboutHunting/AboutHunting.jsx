@@ -4,6 +4,7 @@ import './aboutHunting.css'
 import MapAboutHunting from "./MapAboutHunting/MapAboutHunting.jsx";
 import Team from "../Home/Main/Team/Team.jsx";
 import {useEffect} from "react";
+import Map from "../Map/Map.jsx";
 
 const AboutHunting = () => {
     const scrollToTop = () => {
@@ -21,7 +22,7 @@ const AboutHunting = () => {
             <UsAboutHunting/>
             <CardsAboutHunting/>
             <Team/>
-            <MapAboutHunting/>
+            <Map/>
         </div>
     );
 
