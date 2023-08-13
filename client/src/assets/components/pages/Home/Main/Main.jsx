@@ -13,7 +13,7 @@ const Main = () => {
             <Indorm/>
             <Properties/>
             <Team/>
-             <BestOffers/>
+             {/*<BestOffers/>*/}
         </div>
     );
 };

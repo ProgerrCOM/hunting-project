@@ -1,6 +1,6 @@
 import {NavLink, useParams} from "react-router-dom";
-import {listAboutAnimals} from "../../AboutAnimals/ListAboutAnimals/listAboutAnimals.js";
-import {birds} from "../../AboutAnimals/ListAboutAnimals/listAboutBirds.js";
+import {listAboutAnimalsArr} from "../../AboutAnimals/ListAboutAnimals/listAboutAnimalsArr.jsx";
+import {birds} from "../../AboutAnimals/ListAboutAnimals/listAboutBirdsArr.jsx";
 
 import './itemDetails.css'
 import Properties from "../../Home/Main/Properties/Properties.jsx";
@@ -21,7 +21,7 @@ const ItemDetails = () => {
 
     const {itemId} = useParams();
     const item =
-        listAboutAnimals.find((animal) => animal.id === parseInt(itemId)) ||
+        listAboutAnimalsArr.find((animal) => animal.id === parseInt(itemId)) ||
         birds.find((bird) => bird.id === parseInt(itemId));
 
     return (

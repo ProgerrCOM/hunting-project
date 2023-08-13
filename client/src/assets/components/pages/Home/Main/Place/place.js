@@ -1,6 +1,6 @@
-      import bird_1 from '/src/assets/img/bird-1.jpg'
+      import bird_1 from '/src/assets/img/Качка.jpg'
       import bird_2 from '/src/assets/img/bird-2.jpg'
-      import bird_3 from '/src/assets/img/bird-3.jpg'
+      import bird_3 from '/src/assets/img/Голуб.jpg'
       import bird_4 from '/src/assets/img/bird-4.jpg'
        export const place = [
            {
@@ -17,7 +17,7 @@
            {
                id:3,
                img:bird_3,
-               container:"Деркач"
+               container:"Голуб вяхирь"
            },
            {
                id:4,

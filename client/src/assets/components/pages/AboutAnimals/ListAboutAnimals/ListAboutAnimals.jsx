@@ -3,9 +3,9 @@ import './listAboutAnimals.css'
 import 'bootstrap/dist/css/bootstrap.css';
 import '../../Home/Main/Properties/properties.css';
 import {useEffect, useState} from "react";
-import {listAboutAnimals} from "./listAboutAnimals.js";
+import {listAboutAnimalsArr} from "./listAboutAnimalsArr.jsx";
 import {NavLink} from "react-router-dom";
-import {birds} from "./listAboutBirds.js";
+import {birds} from "./listAboutBirdsArr.jsx";
 
 const ListAboutAnimals = () => {
     const [visibleItems, setVisibleItems] = useState([]);
@@ -41,7 +41,7 @@ const ListAboutAnimals = () => {
                     <div className='titleList'>
                         <p>Полювання на тварин</p>
                     </div>
-                    {listAboutAnimals.map(listAboutAnimal => (
+                    {listAboutAnimalsArr.map(listAboutAnimal => (
                         <NavLink to={`/item/${listAboutAnimal.id}`}
                                 id={`item-${listAboutAnimal.id}`}
                                 key={listAboutAnimal.id}
