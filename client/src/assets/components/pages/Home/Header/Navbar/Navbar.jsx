@@ -62,6 +62,9 @@ const Navbar = () => {
                     <li className="myNavbar__item">
                         <NavLink to="/aboutForm" onClick={handleLinkClick}>Про платежі</NavLink>
                     </li>
+                    <li>
+                        <NavLink to="/admin">admin</NavLink>
+                    </li>
                 </ul>
                 <button className="burger-button" onClick={handleBurgerMenuToggle}>
                     <div className={`bar ${showBurgerMenu ? 'active' : ''}`}/>

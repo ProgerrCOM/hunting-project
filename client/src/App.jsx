@@ -6,6 +6,8 @@ import Navbar from './assets/components/pages/Home/Header/Navbar/Navbar';
 import AboutAnimals from "./assets/components/pages/AboutAnimals/AboutAnimals.jsx";
 import ItemDetails from "./assets/components/pages/ItemDetails/ItemDetailsInfo/ItemDetails.jsx";
 import AboutForm from "./assets/components/pages/AboutForm/AboutForm.jsx";
+import AnimalList from "./assets/admin/AnimalPanel.jsx";
+import AdminPanel from "./assets/admin/AnimalPanel.jsx";
 
 function App() {
     return (
@@ -18,6 +20,8 @@ function App() {
                 <Route path="/aboutAnimals" element={<AboutAnimals />} />
                 <Route path="/item/:itemId" element={<ItemDetails />} />
                 <Route path="/aboutForm" element={<AboutForm/>}/>
+                {/*<Route path="/adminAnimal" element={<AnimalList/>}/>*/}
+                <Route path="/admin" element={<AdminPanel/>}/>
             </Routes>
         </Router>
     );

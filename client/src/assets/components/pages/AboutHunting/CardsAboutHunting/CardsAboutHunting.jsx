@@ -1,28 +1,29 @@
-import { useEffect, useState } from 'react';
+import React, { useState } from 'react';
+import useFirebaseData from "../../../../hooks/useFirebaseData.js";
 import './cardsAboutHunting.css';
 import 'bootstrap/dist/css/bootstrap.css';
-import { cardsAboutHuntings } from "./cardsAboutHunting.js";
 
 const CardsAboutHunting = () => {
     const [visibleCards, setVisibleCards] = useState([]);
+    const cardsAboutHuntings = useFirebaseData('cardsAboutHuntings');
 
-    useEffect(() => {
-        const handleScroll = () => {
-            const windowHeight = window.innerHeight;
-            const cardElements = document.querySelectorAll('.cardsAboutHunting__item');
+    const handleScroll = () => {
+        const windowHeight = window.innerHeight;
+        const cardElements = document.querySelectorAll('.cardsAboutHunting__item');
 
-            const newVisibleCards = Array.from(cardElements).reduce((acc, cardElement) => {
-                const rect = cardElement.getBoundingClientRect();
-                const isVisible = rect.top <= windowHeight && rect.bottom >= 0;
-                if (isVisible) {
-                    return [...acc, cardElement.id];
-                }
-                return acc;
-            }, []);
+        const newVisibleCards = Array.from(cardElements).reduce((acc, cardElement) => {
+            const rect = cardElement.getBoundingClientRect();
+            const isVisible = rect.top <= windowHeight && rect.bottom >= 0;
+            if (isVisible) {
+                return [...acc, cardElement.id];
+            }
+            return acc;
+        }, []);
 
-            setVisibleCards(newVisibleCards);
-        };
+        setVisibleCards(newVisibleCards);
+    };
 
+    React.useEffect(() => {
         window.addEventListener('scroll', handleScroll);
         handleScroll();
 
@@ -47,7 +48,7 @@ const CardsAboutHunting = () => {
                             <div className="cardsAboutHunting__text">{cardsAboutHunting.text}</div>
                         </div>
                         <div className="cardsAboutHunting__image col-lg-6">
-                            <img className='cardsAboutHunting__img' src={cardsAboutHunting.img} alt="" />
+                            <img className='cardsAboutHunting__img' src={cardsAboutHunting.imgUrl} alt="" />
                         </div>
                     </div>
                 ))}
