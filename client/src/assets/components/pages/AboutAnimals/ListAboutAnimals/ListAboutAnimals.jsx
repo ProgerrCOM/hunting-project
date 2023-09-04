@@ -3,12 +3,13 @@ import './listAboutAnimals.css'
 import 'bootstrap/dist/css/bootstrap.css';
 import '../../Home/Main/Properties/properties.css';
 import {useEffect, useState} from "react";
-import {listAboutAnimalsArr} from "./listAboutAnimalsArr.jsx";
 import {NavLink} from "react-router-dom";
-import {birds} from "./listAboutBirdsArr.jsx";
+import useFirebaseData from "../../../../hooks/useFirebaseData.js";
 
 const ListAboutAnimals = () => {
     const [visibleItems, setVisibleItems] = useState([]);
+    const listAboutAnimalsArr = useFirebaseData('listAboutAnimalsArr');
+    const birds = useFirebaseData('listAboutBirdsArr');
 
     useEffect(() => {
         const handleScroll = () => {

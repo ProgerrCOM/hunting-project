@@ -1,10 +1,12 @@
 import React, {useEffect, useState} from 'react';
 import './place.css';
-import {place} from "./place.js";
 import {NavLink} from "react-router-dom";
+import useFirebaseData from "../../../../../hooks/useFirebaseData.js";
 
 const Place = () => {
     const [visiblePictures, setVisiblePictures] = useState([]);
+    const place = useFirebaseData('place');
+
 
     useEffect(() => {
         const handleScroll = () => {

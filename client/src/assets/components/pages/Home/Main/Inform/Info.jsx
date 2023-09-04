@@ -1,10 +1,11 @@
 import "./info.css"
 import 'bootstrap/dist/css/bootstrap.css'
-import {info} from "./info.js";
+import useFirebaseData from "../../../../../hooks/useFirebaseData.js";
 
 
 
 const Info = () => {
+    const info = useFirebaseData('info');
     return (
         <div className='info'>
             <div className='info__container _container row'>

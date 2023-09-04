@@ -49,7 +49,7 @@ const Weather = () => {
                 <div className="weather">
                     <div className="weather__container">
                         <div className='weather__temp'>
-                           <a target='_blank' href="https://ua.sinoptik.ua/%D0%BF%D0%BE%D0%B3%D0%BE%D0%B4%D0%B0-%D0%B6%D0%B8%D1%82%D0%BE%D0%BC%D0%B8%D1%80"> Коростень : <span>{weatherData.main.temp}(°C)</span> ( {weatherConditions[weatherData.weather[0].main]} )</a>
+                           <a target='_blank' href="https://ua.sinoptik.ua/%D0%BF%D0%BE%D0%B3%D0%BE%D0%B4%D0%B0-%D0%BA%D0%BE%D1%80%D0%BE%D1%81%D1%82%D0%B5%D0%BD%D1%8C"> Коростень : <span>{weatherData.main.temp}(°C)</span> ( {weatherConditions[weatherData.weather[0].main]} )</a>
                         </div>
                     </div>
                     {/*<p>Temperature: {weatherData.main.temp} °C</p>*/}

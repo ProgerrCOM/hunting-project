@@ -1,11 +1,12 @@
 import React, {useEffect, useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import './properties.css';
-import {properties} from "./properties.js";
 import {NavLink} from "react-router-dom";
+import useFirebaseData from "../../../../../hooks/useFirebaseData.js";
 
 const Properties = () => {
     const [visibleItems, setVisibleItems] = useState([]);
+    const properties = useFirebaseData('properties');
 
     useEffect(() => {
         const handleScroll = () => {

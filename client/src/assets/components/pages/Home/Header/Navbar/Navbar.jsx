@@ -35,19 +35,19 @@ const Navbar = () => {
     return (
         <div className={`myNavbar ${showBurgerMenu ? 'active' : ''}`} ref={burgerRef}>
             <div className="myNavbar__container _container">
-                <ul className="myNavbar__links">
-                    <li className="myNavbar__links__item">
-                        <a href="#">
-                            <img src={facebook} alt=""/>
-                        </a>
-                    </li>
-                    <li className="myNavbar__links__item">
-                        <img src={twitter} alt=""/>
-                    </li>
-                    <li className="myNavbar__links__item">
-                        <img src={UPG} alt=""/>
-                    </li>
-                </ul>
+                {/*<ul className="myNavbar__links">*/}
+                {/*    <li className="myNavbar__links__item">*/}
+                {/*        <a href="#">*/}
+                {/*            <img src={facebook} alt=""/>*/}
+                {/*        </a>*/}
+                {/*    </li>*/}
+                {/*    <li className="myNavbar__links__item">*/}
+                {/*        <img src={twitter} alt=""/>*/}
+                {/*    </li>*/}
+                {/*    <li className="myNavbar__links__item">*/}
+                {/*        <img src={UPG} alt=""/>*/}
+                {/*    </li>*/}
+                {/*</ul>*/}
                 <Weather/>
                 <ul className={`myNavbar__list ${showBurgerMenu ? 'active' : ''}`}>
                     <li className="myNavbar__item">
@@ -61,9 +61,6 @@ const Navbar = () => {
                     </li>
                     <li className="myNavbar__item">
                         <NavLink to="/aboutForm" onClick={handleLinkClick}>Про платежі</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="/admin">admin</NavLink>
                     </li>
                 </ul>
                 <button className="burger-button" onClick={handleBurgerMenuToggle}>

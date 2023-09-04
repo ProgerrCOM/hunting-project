@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import './team.css';
-import { teams } from "./teams.js";
+import useFirebaseData from "../../../../../hooks/useFirebaseData.js";
+
 
 const Team = () => {
     const [visibleItems, setVisibleItems] = useState([]);
+    const teams = useFirebaseData('team');
 
     useEffect(() => {
         const handleScroll = () => {
