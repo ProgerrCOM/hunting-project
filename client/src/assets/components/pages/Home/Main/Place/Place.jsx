@@ -46,7 +46,8 @@ const Place = () => {
 
                 <div className="place__container__picture_main ">
                     {place.map(place => (
-                        <div
+                        <NavLink
+                            to='/aboutAnimals'
                             id={`picture-${place.id}`}
                             key={place.id}
                             className={`place__conteiner__picture ${
@@ -57,7 +58,7 @@ const Place = () => {
                                 <img src={place.img} alt=""/>
                             </div>
                             <div className="palce__container__content">{place.container}</div>
-                        </div>
+                        </NavLink>
                     ))}
                 </div>
                 <div className='place__btn'>

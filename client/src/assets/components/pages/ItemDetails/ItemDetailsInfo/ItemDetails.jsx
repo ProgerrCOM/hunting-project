@@ -48,7 +48,7 @@ const ItemDetails = () => {
                             </div>
                             <div className="itemDetails__specification">
                                 <div className="specification__image">
-                                    <img src={item.img} alt=""/>
+                                    <img src={item.img2} alt=""/>
                                 </div>
                                 <div className="specification__text">
                                     {item.specification}

@@ -50,7 +50,7 @@ const Team = () => {
                             <div className='team__text'>
                                 <div className="team__name">{team.name}</div>
                                 <div className="team__work">{team.place}</div>
-                                <div className="team__number">{team.nomber}</div>
+                                <hr className={"lineHr"}/>
                                 <div className="team__info">{team.info}</div>
                             </div>
                         </div>

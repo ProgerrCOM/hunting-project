@@ -97,12 +97,12 @@
         display: flex;
     }
     .team_content {
-        width: 100%;
-        align-items: center;
+        display: block;
     }
     .team__img {
         width: 100%;
         height: auto;
+        padding-bottom: 30px;
     }
     .team__img img {
         width: 100%;
@@ -117,4 +117,8 @@
     .team__info {
         font-size: 14px;
     }
+}
+
+.lineHr {
+    color: white;
 }

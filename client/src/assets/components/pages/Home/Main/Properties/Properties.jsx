@@ -41,7 +41,7 @@ const Properties = () => {
                 </h3>
                 <div className='row properties__cards'>
                     {properties.map(propertie => (
-                        <div
+                        <NavLink to='/aboutAnimals'
                             id={`item-${propertie.id}`}
                             key={propertie.id}
                             className={`properties__item col-xl-6 col-lg-12 ${
@@ -66,7 +66,7 @@ const Properties = () => {
                                     <p className="properties__history">{propertie.description}</p>
                                 </div>
                             </div>
-                        </div>
+                        </NavLink>
                     ))}
                 </div>
                 <div className='properties__button'>

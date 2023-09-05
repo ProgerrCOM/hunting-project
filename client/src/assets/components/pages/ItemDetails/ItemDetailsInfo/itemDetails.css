@@ -117,13 +117,13 @@
 
 @media (max-width: 576px) {
   .itemDetails__text {
-      font-size: 20px;
+      font-size: 25px;
   }
     .itemDetails__description {
-        font-size: 12px;
+        font-size: 18px;
     }
     .itemDetails__price {
-        font-size: 12px;
+        font-size: 16px;
     }
     .itemDetails__button {
         padding: 12px 20px;
